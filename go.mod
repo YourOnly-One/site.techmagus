@@ -1,0 +1,12 @@
+module techmagus
+
+go 1.17
+
+require (
+	github.com/YourOnly-One/yoo-hugo-defaults main
+	github.com/YourOnly-One/hugo-structured-data master
+	github.com/YourOnly-One/hugo-shortcodes main
+	github.com/YourOnly-One/hugo-atom-feed master
+	github.com/zzossig/hugo-theme-zzo master
+	github.com/YourOnly-One/yoo-hugo-content main
+)

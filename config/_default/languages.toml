@@ -1,0 +1,107 @@
+### Info: https://gohugo.io/content-management/multilingual/#configure-languages
+
+#[en]
+  #languageName = "English"
+  #languageFlag = "🇬🇧"
+  #languageCodeHTML = "en"
+  #languageCodeCountry = "DO_NOT_USE"
+  #timeZone = "Etc/UTC"
+  #weight = 110
+
+[en-ph]
+  languageName = "English (PH)"
+  languageFlag = "🇵🇭"
+  languageCodeHTML = "en-PH"
+  languageCodeCountry = "ph"
+  timeZone = "Asia/Manila"
+  weight = 111
+  [[en-ph.menu.main]]
+    name              = "Home"
+    identifier        = "home"
+    url               = "/"
+    pre               = "home"
+    weight            = 1
+    [en-ph.menu.main.params]
+      newTab = false
+
+#[fil]
+  #languageName = "Filipino"
+  #languageFlag = "🇵🇭"
+  #languageCodeHTML = "fil"
+  #languageCodeCountry = "ph"
+  #timeZone = "Asia/Manila"
+  #weight = 120
+  #title = ""
+  #[fil.params]
+    #description = ""     # IMPT for Schema.org; OpenGraph; Twitter Cards -- for RDFa, Microdata, JSON-LD
+
+#[tl-tglg]
+  #languageName = "Tagalog Baybayin"
+  #languageFlag = "🇵🇭"
+  #languageCodeHTML = "tl-Tglg"
+  #languageCodeCountry = "ph"
+  #timeZone = "Asia/Manila"
+  #weight = 121
+  #title = ""
+  #[tl.tglg.params]
+    #description = ""     # IMPT for Schema.org; OpenGraph; Twitter Cards -- for RDFa, Microdata, JSON-LD
+
+#[zh-hant]
+  #languageName = "中文（繁體）"
+  #languageFlag = "🇨🇳"
+  #languageCodeHTML = "zh-Hant"
+  #languageCodeCountry = "cn"
+  #timeZone = "Asia/Shanghai"
+  #weight = 130
+  #title = ""
+  #[zh-hant.params]
+    #description = ""     # IMPT for Schema.org; OpenGraph; Twitter Cards -- for RDFa, Microdata, JSON-LD
+
+#[zh-hans]
+  #languageName = "中文（简体）"
+  #languageFlag = "🇨🇳"
+  #languageCodeHTML = "zh-Hans"
+  #languageCodeCountry = "cn"
+  #timeZone = "Asia/Shanghai"
+  #weight = 131
+  #title = ""
+  #[zh-hans.params]
+    #description = ""     # IMPT for Schema.org; OpenGraph; Twitter Cards -- for RDFa, Microdata, JSON-LD
+
+[ja]
+  languageName = "日本語"
+  languageFlag = "🇯🇵"
+  languageCodeHTML = "ja"
+  languageCodeCountry = "jp"
+  timeZone = "Asia/Tokyo"
+  weight = 140
+  title = "ハイテク マギ"
+  [[ja.menu.main]]
+    name              = "ホーム"
+    identifier        = "home"
+    url               = "/"
+    pre               = "home"
+    weight            = 1
+    [ja.menu.main.params]
+      newTab = false
+  [ja.params]
+    description = "科学技術の遊び場"     # IMPT for Schema.org; OpenGraph; Twitter Cards -- for RDFa, Microdata, JSON-LD
+
+[ko]
+  languageName = "한국어"
+  languageFlag = "🇰🇷"
+  languageCodeHTML = "ko"
+  languageCodeCountry = "kr"
+  timeZone = "Asia/Seoul"
+  weight = 150
+  title = "테크 마구스"
+  [[ko.menu.main]]
+    name              = "집"
+    identifier        = "home"
+    url               = "/"
+    pre               = "home"
+    weight            = 1
+    [ko.menu.main.params]
+      newTab = false
+  [ko.params]
+    description = "과학 기술 놀이터"     # IMPT for Schema.org; OpenGraph; Twitter Cards -- for RDFa, Microdata, JSON-LD

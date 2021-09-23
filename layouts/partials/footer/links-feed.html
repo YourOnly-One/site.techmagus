@@ -1,0 +1,19 @@
+{{ if $.Param "showFeedLinks" }}
+  {{ if not (in ($.Param "notAllowedTypesInHomeFeed") .Type) }}
+  {{ $exclude := slice "tags" "series" "categories" }}
+    {{- /* YourOnly.One: changed
+      {{ if not (in $exclude .Type) }}
+        <a href="{{ if eq hugo.Version "0.65.2" }}{{ .CurrentSection.FirstSection.Permalink }}{{ else }}{{ .FirstSection.Permalink }}{{ end }}index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link">
+          {{ partial "svgs/etc/rss.svg" (dict "width" 32 "height" 32) }}
+        </a>
+      {{ else }}
+        <a href="{{ .Permalink }}/index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link">
+          {{ partial "svgs/etc/rss.svg" (dict "width" 32 "height" 32) }}
+        </a>
+      {{ end }}
+    */ -}}
+    {{ with .OutputFormats.Get "Atom" }}
+        <li><a href="{{ .RelPermalink }}" type="application/atom+xml" title="Feed" class="fas fa-rss"></a></li>
+    {{ end }}
+  {{ end }}
+{{ end }}

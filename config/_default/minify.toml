@@ -1,0 +1,23 @@
+minifyOutput = false                                    # should be false to keep the casing of hreflang
+
+[tdewolff]
+  #[tdewolff.css]
+    #keepCSS2 = true
+    #precision = 0
+  [tdewolff.html]
+    #keepComments = false
+    #keepConditionalComments = true
+    #keepDefaultAttrVals = true
+    #keepDocumentTags = true
+    keepEndTags = true
+    keepQuotes = true
+    #keepWhitespace = true
+  #[tdewolff.js]
+    #keepVarNames = false
+    #precision = 0
+  #[tdewolff.json]
+    #precision = 0
+  #[tdewolff.svg]
+    #precision = 0
+  #[tdewolff.xml]
+    #keepWhitespace = false
