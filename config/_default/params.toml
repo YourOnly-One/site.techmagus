@@ -43,8 +43,8 @@ jquerycdn = true
 ### BGN: Theme settings
   #logoText = "techmagus"                                                     # We are not using this
   logoType = "short" # long, short
-  custom_css = []
-  custom_js = []
+  #custom_css = []
+  #custom_js = []
   useFaviconGenerator = false # https://www.favicon-generator.org/
   meta_image = ""
   themecolor = ""
@@ -70,12 +70,12 @@ jquerycdn = true
   hideHomeHeaderWhenMobile = false
 
   # menu
-  showMobileMenuTerms = ["tags", "categories", "series"]
+  showMobileMenuTerms = ["series", "categories", "tags"]
 
   # search
   enableSearch = true
   enableSearchHighlight = true
-  searchResultPosition = "main" # side, main
+  searchResultPosition = "side" # side, main
   searchContent = true # include content to search index
   searchDistance = 100 # fuse option
   searchThreshold = 0.4 # 0.0: exact match, 1.0: any match
@@ -83,10 +83,10 @@ jquerycdn = true
   # body
   enableBreadcrumb = false
   enableGoToTop = true
-  enableWhoami = true
+  enableWhoami = false
   summaryShape = "classic" # card, classic, compact
   archiveGroupByDate = "2006-01" # "2006-01": group by month, "2006": group by year
-  archivePaginate = 13
+  archivePaginate = 10
   paginateWindow = 1
   talksPaginate = 5
   talksGroupByDate = "2006-01"
@@ -101,24 +101,25 @@ jquerycdn = true
   publicationIcon = "📚"
   typeIcon = "🎯"
 
+  # We are not using this
   # whoami
-  myname = ""
-  email = ""
-  whoami = ""
-  bioImageUrl = ""
-  useGravatar = false
-  location = ""
-  organization = ""
-  link = ""
+  #myname = ""
+  #email = ""
+  #whoami = ""
+  #bioImageUrl = ""
+  #useGravatar = false
+  #location = ""
+  #organization = ""
+  #link = ""
 
   # sidebar
-  enableBio = true
+  enableBio = false
   enableBioImage = true
   enableSidebar = true
   enableSidebarTags = true
   enableSidebarSeries = true
   enableSidebarCategories = true
-  enableSidebarChannels = true
+  enableSidebarChannels = false
   enableHomeSidebarTitles = true
   enableListSidebarTitles = true
   enableToc = true
@@ -139,8 +140,8 @@ jquerycdn = true
   enableThemeChange = true
 
   # service
-  #googleTagManager = "GTM-KT65GHZ" # We already have this set on our own (see top of this file)
-  baiduAnalytics = ""
+  #googleTagManager = ""                                          # We already have this set on our own (see top of this file)
+  #baiduAnalytics = ""
   enableBusuanzi = false
   busuanziSiteUV = true
   busuanziSitePV = true
@@ -153,109 +154,126 @@ jquerycdn = true
 
   # comment
   enableComment = true
-  disqus_shortname = ""
+  #disqus_shortname = ""                                          # We are using the default disqus param
   commento = false
 
   [telegram]
     enable = false
-    siteId = ""
-    dataLimit = 5
+    #siteId = ""
+    #dataLimit = 5
 
-  [gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
-    owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
-    clientId = ""           # Your client ID
-    clientSecret = ""       # Your client secret
+  #[gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
+    #owner = ""              # Your GitHub ID
+    #repo = ""               # The repo to store comments
+    #clientId = ""           # Your client ID
+    #clientSecret = ""       # Your client secret
 
-  [utterances]       # https://utteranc.es/
-    owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
+  #[utterances]       # https://utteranc.es/
+    #owner = ""              # Your GitHub ID
+    #repo = ""               # The repo to store comments
 
-  [gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
-    owner = ""              # Your GitHub ID
-    repo = ""               # The repo to store comments
-    clientId = ""           # Your client ID
-    clientSecret = ""       # Your client secret
+  #[gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
+    #owner = ""              # Your GitHub ID
+    #repo = ""               # The repo to store comments
+    #clientId = ""           # Your client ID
+    #clientSecret = ""       # Your client secret
 
   # Valine.
   # You can get your appid and appkey from https://leancloud.cn
   # more info please open https://valine.js.org
   [valine]
     enable = false
-    appId = '你的appId'
-    appKey = '你的appKey'
-    notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
-    verify = false # Verification code
-    avatar = 'mm' 
-    placeholder = '说点什么吧...'
-    visitor = false
+    #appId = '你的appId'
+    #appKey = '你的appKey'
+    #notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
+    #verify = false # Verification code
+    #avatar = 'mm' 
+    #placeholder = '说点什么吧...'
+    #visitor = false
 
-  [changyan]
-    changyanAppid = ""        # Changyan app id             # 畅言
-    changyanAppkey = ""       # Changyan app key
+  #[changyan]
+    #changyanAppid = ""        # Changyan app id             # 畅言
+    #changyanAppkey = ""       # Changyan app key
 
-  [livere]
-    livereUID = ""            # LiveRe UID                  # 来必力
+  #[livere]
+    #livereUID = ""            # LiveRe UID                  # 来必力
 
   # Isso: https://posativ.org/isso/
-  [isso]
+  #[isso]
     enable = false
-    scriptSrc = "" # "https://isso.example.com/js/embed.min.js"
-    dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
+    #scriptSrc = "" # "https://isso.example.com/js/embed.min.js"
+    #dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
   # We are not using this
   #[socialOptions]
-  #  email = "mailto:your@email.com"
-  #  phone = ""
-  #  facebook = "http://example.org/"
-  #  twitter = "http://example.org/"
-  #  github = "https://github.com/zzossig/hugo-theme-zzo"
-  #  stack-overflow = ""
-  #  instagram = ""
-  #  google-plus = ""
-  #  youtube = ""
-  #  medium = ""
-  #  tumblr = ""
-  #  linkedin = ""
-  #  pinterest = ""
-  #  stack-exchange = ""
-  #  telegram = ""
-  #  steam = ""
-  #  weibo = ""
-  #  douban = ""
-  #  csdn = ""
-  #  gitlab = ""
-  #  mastodon = ""
-  #  jianshu = ""
-  #  zhihu = ""
-  #  signal = ""
-  #  whatsapp = ""
-  #  matrix = ""
-  #  xmpp = ""
-  #  dev-to = ""
-  #  gitea = ""
-  #  google-scholar = ""
+    #email = "mailto:your@email.com"
+    #phone = ""
+    #facebook = "http://example.org/"
+    #twitter = "http://example.org/"
+    #github = "https://github.com/zzossig/hugo-theme-zzo"
+    #stack-overflow = ""
+    #instagram = ""
+    #google-plus = ""
+    #youtube = ""
+    #medium = ""
+    #tumblr = ""
+    #linkedin = ""
+    #pinterest = ""
+    #stack-exchange = ""
+    #telegram = ""
+    #steam = ""
+    #weibo = ""
+    #douban = ""
+    #csdn = ""
+    #gitlab = ""
+    #mastodon = ""
+    #jianshu = ""
+    #zhihu = ""
+    #signal = ""
+    #whatsapp = ""
+    #matrix = ""
+    #xmpp = ""
+    #dev-to = ""
+    #gitea = ""
+    #google-scholar = ""
 
   [donationOptions]
     enable = false
-    alipay = ""
-    wechat = ""
-    paypal = ""
-    patreon = ""
+    #alipay = ""
+    #wechat = ""
+    paypal = "https://paypal.me/yukino/"
+    #patreon = ""
 
-  # possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "pocket", "feedly", "hatena", "pinterest", "delicious", "google"]
+  # possible share name: ["facebook", "twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "telegram", "whatsapp", "pocket", "feedly", "hatena", "pinterest"]
   [[share]]
     name = "facebook"
-    username = ""
+    username = "YourOnly.One0"
+  [[share]]
+    name = "hatena"
+  [[share]]
+    name = "line"
+  [[share]]
+    name = "linkedin"
+  [[share]]
+    name = "pinterest"
+  [[share]]
+    name = "reddit"
+  [[share]]
+    name = "telegram"
+  [[share]]
+    name = "tumblr"
   [[share]]
     name = "twitter"
+  [[share]]
+    name = "whatsapp"
 
-  [[footerLinks]]
-    name = ""
-    link = ""
-  [[footerLinks]]
-    name = ""
-    link = ""
+  # We are not using this, we edited the footer template directly
+  #[[footerLinks]]
+    #name = ""
+    #link = ""
+  #[[footerLinks]]
+    #name = ""
+    #link = ""
 ### END: Theme settings
 
 ### BGN: Other Settings ###
@@ -272,6 +290,7 @@ jquerycdn = true
     locationorigin = "Philippines"
     locationcurrent = "Philippines"
     organization = "Yelosan Publishing"
+
     rel = "me noopener"
     #rel = "noopener external nofollow"
 
