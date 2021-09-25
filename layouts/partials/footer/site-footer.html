@@ -14,23 +14,24 @@
 
   <div class="footer__poweredby">
     {{ partial "footer/site-counter" . }}
-    {{ if $.Site.Copyright }}        
-      <p class="caption">
-        {{ if $.Site.Params.copyrightOptions.enableCopyrightLink }}
-          {{ $leftString := replace (index (split $.Site.Copyright "{}") 0) "{year}" now.Year }}
-          {{ $rightString := replace (index (split $.Site.Copyright "{}") 1) "{year}" now.Year }}
+    {{- /* YourOnly.One: disabled
+      {{ if $.Site.Copyright }}        
+        <p class="caption">
+          {{ if $.Site.Params.copyrightOptions.enableCopyrightLink }}
+            {{ $leftString := replace (index (split $.Site.Copyright "{}") 0) "{year}" now.Year }}
+            {{ $rightString := replace (index (split $.Site.Copyright "{}") 1) "{year}" now.Year }}
 
-          {{ if and ($.Site.Params.copyrightOptions.copyrightLinkImage) ($.Site.Params.copyrightOptions.copyrightLinkText) }}
-            <a rel="license" href="{{ $.Site.Params.copyrightOptions.copyrightLink }}" class="footer__copyright--img"><img alt="{{ $.Site.Params.copyrightOptions.copyrightLinkText }}" style="border-width:0" src="{{ $.Site.Params.copyrightOptions.copyrightLinkImage }}"/></a>{{ $leftString | markdownify }}<a rel="license" href="{{ $.Site.Params.copyrightOptions.copyrightLink }}">{{ $.Site.Params.copyrightOptions.copyrightLinkText }}</a>{{ $rightString | markdownify }}
+            {{ if and ($.Site.Params.copyrightOptions.copyrightLinkImage) ($.Site.Params.copyrightOptions.copyrightLinkText) }}
+              <a rel="license" href="{{ $.Site.Params.copyrightOptions.copyrightLink }}" class="footer__copyright--img"><img alt="{{ $.Site.Params.copyrightOptions.copyrightLinkText }}" style="border-width:0" src="{{ $.Site.Params.copyrightOptions.copyrightLinkImage }}"/></a>{{ $leftString | markdownify }}<a rel="license" href="{{ $.Site.Params.copyrightOptions.copyrightLink }}">{{ $.Site.Params.copyrightOptions.copyrightLinkText }}</a>{{ $rightString | markdownify }}
+            {{ else }}
+              {{ $leftString | markdownify }}<a rel="license" href="{{ $.Site.Params.copyrightOptions.copyrightLink }}">{{ $.Site.Params.copyrightOptions.copyrightLinkText }}</a>{{ $rightString | markdownify }}
+            {{ end }}
           {{ else }}
-            {{ $leftString | markdownify }}<a rel="license" href="{{ $.Site.Params.copyrightOptions.copyrightLink }}">{{ $.Site.Params.copyrightOptions.copyrightLinkText }}</a>{{ $rightString | markdownify }}
+            {{ with $.Site.Copyright }}{{ replace . "{year}" now.Year | markdownify}}{{ end }}
           {{ end }}
-        {{ else }}
-          {{ with $.Site.Copyright }}{{ replace . "{year}" now.Year | markdownify}}{{ end }}
-        {{ end }}
-      </p>
-    {{ end }}
-
+        </p>
+      {{ end }}
+    */ -}}
     <div class="caption">
     <!-- BGN: YourOnly.One Footer-01 -->
       {{- if templates.Exists "partials/youronly.one-footer-01.html" -}}
@@ -38,10 +39,14 @@
       {{- end }}
     <!-- END: YourOnly.One Footer-01 -->
     </div>
+    <p class="caption txt_center">
+      <a href="https://github.com/zzossig/hugo-theme-zzo" rel="noopener external nofollow">Zzo</a> {{ i18n "themeby" }} <a href="https://github.com/zzossig" rel="noopener external nofollow" lang="ko">최성환</a>
+    </p>
 
-    {{ if $.Param "showPoweredBy" }}
-      {{/* YourOnly.One: changed */}}
-        <p class="caption">{{ i18n (lower "themeby") }} <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
-    {{ end }}
+    {{- /* YourOnly.One: disabled
+      {{ if $.Param "showPoweredBy" }}
+          <p class="caption">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
+      {{ end }}
+    */ -}}
   </div> 
 </footer>
