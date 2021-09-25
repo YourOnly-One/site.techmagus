@@ -14,7 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     */ -}}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ block "title" . }}{{ if or (eq .Kind "term") (eq .Kind "taxonomy") }}{{ i18n (lower .Title) }}{{ else }}{{ .Title }}{{ end }} – {{ .Site.Title }}{{ end }}</title>
+    {{/* YourOnly.One: changed */}}
+    <title>{{ block "title" . }}{{ if eq .Kind "taxonomy" }}{{ i18n (lower .Title) }}{{ else }}{{ .Title }}{{ end }} – {{ .Site.Title }}{{ end }}</title>
     {{ partial "head/scripts" . }}    
     {{ partial "head/styles" . }}
     {{ partial "head/meta" . }}

@@ -1,10 +1,12 @@
+{{/* YourOnly.One: POST LIST FOR TERMS */}}
 {{ define "main" }}
 
 <main class="main inner" data-sidebar-position="{{ $.Param "sidebarPosition" }}">
   <div class="list__main {{ if $.Param "enableSidebar" }}{{ if eq ($.Param "sidebarPosition") "left" }}mr{{ else }}lm{{ end }}{{ else }}lmr{{ end }}">
     {{ partial "body/breadcrumb" . }}
     <header class="list__header">
-      <h5 class="list__header--title capitalize h5">{{ i18n (lower .Title) }}</h5>
+      {{/* YourOnly.One: changed */}}
+      <h5 class="list__header--title capitalize h5">{{ .Page.Title }}</h5>
     </header>
     
     <div class="list__header--desc p2">
