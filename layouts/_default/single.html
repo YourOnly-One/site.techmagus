@@ -1,3 +1,4 @@
+{{/* YourOnly.One: THIS SHOWS IN POST SINGLE */}}
 {{ define "main" }}
 
 <main class="single__main {{ if or ($.Param "enableToc") ($.Param "toc") }}{{ if $.Param "hideToc" }}main{{ else if eq ($.Param "tocPosition") "outer" }}main{{ else }}main-main{{ end }}{{ else }}main{{ end }}">
@@ -14,10 +15,11 @@
   <div class="single {{ if $.Param "hideSingleContentsWhenJSDisabled" }}hide{{ end }}">
     <div class="single__nojs">{{ i18n "nojs-message" }}</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
+    {{/* YourOnly.One: new addition */}}
     {{ with .Params.images }}
-      {{ range first 1 . }}
-        <img src="{{ . | absURL }}" />
-      {{ end }}
+      <div class="txt_center" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
+        <img src="{{ index . 0 | absURL }}" />
+      </div>
     {{ end }}
     <h2 class="single__title" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">{{ .Title }}</h2>
     <h3 class="single__subtitle">{{ .Params.subtitle }}</h3>
