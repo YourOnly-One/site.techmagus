@@ -10,3 +10,4 @@ tags = "/tag/:slug/"
 
 channels = "/channels/:slug/"
 c = "/:sections/:slug-:year:yearday/"
+kb = "/:sections/:slug-:year:yearday/"
