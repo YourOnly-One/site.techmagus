@@ -1,4 +1,4 @@
-{{/* YourOnly.One: THIS SHOWS IN POST SINGLE */}}
+{{/* YourOnly.One: POST VIEW */}}
 {{ define "main" }}
 
 <main class="single__main {{ if or ($.Param "enableToc") ($.Param "toc") }}{{ if $.Param "hideToc" }}main{{ else if eq ($.Param "tocPosition") "outer" }}main{{ else }}main-main{{ end }}{{ else }}main{{ end }}">
