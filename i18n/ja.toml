@@ -2,31 +2,22 @@
 other = "検索"
 
 [summary-dateformat]
-other = "2006/1/2"
+other = "2006年1月2日"
 
 [reading-time]
-other = "分で読めます"
-
-[tags]
-other = "タグ"
-
-[categories]
-other = "カテゴリ"
-
-[series]
-other = "連載"
+other = "読む分"
 
 [archive-dateformat]
-other = "1/2"
+other = "1月2日"
 
 [talks-dateformat]
-other = "1/2"
+other = "1月2日"
 
 [single-dateformat]
-other = "2006/1/2"
+other = "2006年1月2日"
 
 [pub-dateformat]
-other = "2006/01/02"
+other = "2006年1月2日"
 
 [resume-dateformat]
 other = "2006年1月"

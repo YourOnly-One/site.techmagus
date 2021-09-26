@@ -5,19 +5,10 @@ other = "검색"
 other = "2006년 01월 02일"
 
 [reading-time]
-other = "min read"
-
-[tags]
-other = "태그"
-
-[categories]
-other = "카테고리"
-
-[series]
-other = "시리즈"
+other = "분 읽기"
 
 [archive-dateformat]
-other = "01-02"
+other = "01월 02일"
 
 [talks-dateformat]
 other = "01월 02일"
@@ -26,7 +17,7 @@ other = "01월 02일"
 other = "2006년 01월 02일"
 
 [pub-dateformat]
-other = "2006-01-02"
+other = "2006년 01월 02일"
 
 [resume-dateformat]
 other = "2006년 01월"
