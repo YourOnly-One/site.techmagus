@@ -15,7 +15,7 @@
     */ -}}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {{/* YourOnly.One: changed */}}
-    <title>{{ block "title" . }}{{ if eq .Kind "taxonomy" }}{{ i18n (lower .Title) }}{{ else }}{{ .Title }}{{ end }} – {{ .Site.Title }}{{ end }}</title>
+    <title>{{ block "title" . }}{{ if eq .Kind "taxonomy" }}{{ i18n .Data.Plural (len .Data.Terms) }}{{ else }}{{ .Title }}{{ end }} – {{ .Site.Title }}{{ end }}</title>
     {{ partial "head/scripts" . }}    
     {{ partial "head/styles" . }}
     {{ partial "head/meta" . }}
