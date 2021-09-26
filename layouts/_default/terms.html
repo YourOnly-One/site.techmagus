@@ -3,7 +3,7 @@
 {{ $title := .Title }}
 <header class="header basicflex-column">
   {{/* YourOnly.One: changes */}}
-  <h3 class="terms__title capitalize h3">{{ i18n (lower $title) }}</h3>
+  <h3 class="terms__title capitalize h3">{{ i18n .Data.Plural (len .Data.Terms) }}</h3>
 </header>
 <main class="terms main">  
   <div class="terms__list">
