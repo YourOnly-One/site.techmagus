@@ -4,9 +4,9 @@ github.com/YourOnly-One/hugo-shortcodes v0.0.0-20210906082846-759c056ba3d0 h1:3V
 github.com/YourOnly-One/hugo-shortcodes v0.0.0-20210906082846-759c056ba3d0/go.mod h1:7HpQrDCu16z5lWm5JqGsSHur4EmA/rXIO1h7Y539ctM=
 github.com/YourOnly-One/hugo-structured-data v0.0.0-20210906092140-799dc15017b1 h1:WSNHbRSDIXbK/RLhATkOLZGoLyAnYeyCWQwP9vELq+4=
 github.com/YourOnly-One/hugo-structured-data v0.0.0-20210906092140-799dc15017b1/go.mod h1:fh2ZF1p5Pm7WoH96N+8Kz7SK+UCYYumip4GFr2pOp5E=
-github.com/YourOnly-One/yoo-hugo-content v0.0.0-20210923034708-581ef6078ab0 h1:ALpV/ZqF/OA9me1k2OCDqQgHmyzxnmEBdbDWNmVYXgE=
-github.com/YourOnly-One/yoo-hugo-content v0.0.0-20210923034708-581ef6078ab0/go.mod h1:6xVSAq28SE0sNAk8f+n3l0GqIExME2r1v+ZA/XdIc/o=
-github.com/YourOnly-One/yoo-hugo-defaults v0.0.0-20210923112907-bf331dd35beb h1:e2sSa4I5w/pNgo+BoaYFEFAdJFnPwhio0iET7Lsm5o4=
-github.com/YourOnly-One/yoo-hugo-defaults v0.0.0-20210923112907-bf331dd35beb/go.mod h1:CySocAz+5l/ZN5AMLSrlS0JR6DOn1+P13zY9sKFN6hM=
-github.com/zzossig/hugo-theme-zzo v0.0.0-20210523142617-01f9e43e59b0 h1:dzCyz1kMiloRMSGX6T1aaWp8+n92SvxPXEIxeY1+w9Y=
-github.com/zzossig/hugo-theme-zzo v0.0.0-20210523142617-01f9e43e59b0/go.mod h1:2EWm/W7lxc7FNLLy9XfEuA+ofCPILQzeKFooJdpOCcM=
+github.com/YourOnly-One/yoo-hugo-content v0.0.0-20210927115257-093ffe5e9136 h1:BdLyibYYseVrMrT1xW0bFKGcvoXh8Jt98xshwKQyM0U=
+github.com/YourOnly-One/yoo-hugo-content v0.0.0-20210927115257-093ffe5e9136/go.mod h1:6xVSAq28SE0sNAk8f+n3l0GqIExME2r1v+ZA/XdIc/o=
+github.com/YourOnly-One/yoo-hugo-defaults v0.0.0-20210927141041-b136c6c3ce8f h1:Z+GwPtIQIR6rSaovGlZ+XZsUKSmwEX7YmbqUTC4ZnnM=
+github.com/YourOnly-One/yoo-hugo-defaults v0.0.0-20210927141041-b136c6c3ce8f/go.mod h1:CySocAz+5l/ZN5AMLSrlS0JR6DOn1+P13zY9sKFN6hM=
+github.com/techmagus/hugo-theme-zzo v0.0.0-20210926030623-a6169f40abd3 h1:p3P+mpc4VJQQTIXStEsbNmITmwRBWNIPrhBIn1IXsUs=
+github.com/techmagus/hugo-theme-zzo v0.0.0-20210926030623-a6169f40abd3/go.mod h1:xMql1Is+mZe/4RaBy21hIfLFU32d+mtW43tARWAe5gQ=
