@@ -35,6 +35,13 @@
     {{ partial "script/clipboard-script" . }}
     {{ partial "script/codeblock-script" . }}
     {{ partial "body/share" . }}
+    <div class="single__contents">
+      <!-- BGN: YourOnly.One Head-01-Top -->
+        {{- if templates.Exists "partials/youronly.one-post-02-btm.html" -}}
+          {{ partial "youronly.one-post-02-btm.html" . }}
+        {{- end }}
+      <!-- END: YourOnly.One Head-01-Top -->
+    </div>
     {{ partial "body/donation" . }}
     {{ partial "body/whoami" . }}
     {{ partial "body/related" . }}
