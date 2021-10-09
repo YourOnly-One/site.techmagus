@@ -237,11 +237,12 @@ jquerycdn = true
     #gitea = ""
     #google-scholar = ""
 
+  # We are not using this
   [donationOptions]
     enable = false
     #alipay = ""
     #wechat = ""
-    paypal = "https://paypal.me/yukino/"
+    #paypal = ""
     #patreon = ""
 
   # possible share name: ["facebook", "twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "telegram", "whatsapp", "pocket", "feedly", "hatena", "pinterest"]
