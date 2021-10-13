@@ -15,7 +15,7 @@ jquerycdn = true
   license = "https://im.youronly.one/p/legal-notice/"
   #issn = ""
   #awards = [""]
-  images = ["https://rsc.youronly.one/img/y/YOOki_Chronicles.webp"]
+  images = ["https://rsc.youronly.one/img/y/techmagus-smartphone-1920x1280.webp", "https://rsc.youronly.one/img/y/techmagus-Architetto-Esperiment-chimico.webp"]
 
   name = "YourOnly.One" # your company name
   primaryauthor = "ᜌᜓᜃᜒ (Yuki ・ 雪亮)" # Used as primary author if no specific is set
