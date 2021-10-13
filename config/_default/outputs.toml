@@ -2,7 +2,7 @@
 home = ["HTML", "JSON", "Atom", "RSS", "SearchIndex"]                            # default: HTML, RSS
 
 # home/section/PAGE-POST/atom.xml
-page = ["HTML", "SearchIndex"]                            # default: HTML
+page = ["HTML"]                            # default: HTML
 
 # home/SECTION/atom.xml
 section = ["HTML", "SearchIndex"]                         # default: HTML, RSS
