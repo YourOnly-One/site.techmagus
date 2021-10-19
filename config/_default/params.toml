@@ -9,428 +9,271 @@ faviconbuster = "TimmieIsMyFate"
 jquerycdn = true
 
 ### BGN: Structured Data ###
-  siteStartYear = 2021
+	siteStartYear = 2003
 
-  description = "Science and Technology Playground."
-  license = "https://im.youronly.one/p/legal-notice/"
-  #issn = ""
-  #awards = [""]
-  images = ["https://rsc.youronly.one/img/y/techmagus-smartphone-1920x1280.webp", "https://rsc.youronly.one/img/y/techmagus-Architetto-Esperiment-chimico.webp"]
-
-  name = "YourOnly.One" # your company name
-  primaryauthor = "ᜌᜓᜃᜒ (Yuki ・ 雪亮)" # Used as primary author if no specific is set
-  ownerhomepage = "https://youronly.one"
-  alternatenames = [ "JC John Sese Cuneta", "Yuki"]
-  gender = "https://schema.org/Male"
-  knowslanguages = ["en-PH", "fil", "tl-Tglg"]
-  nationality = "Filipino"
-
-  copyright = ""
-  copyrightnotice = "JC John Sese Cuneta"
-  copyrightyear = "2021"      # same as datePublished
-
-  logourl = "https://rsc.youronly.one/img/y/techmagus-Architetto-Esperiment-chimico.webp" # Used in structured data as logo url
-  keywords = ["YourOnly.One", "Yuki", "ᜌᜓᜃᜒ", "techmagus"] # Can be overriden per page
-  imageurl = "https://rsc.youronly.one/img/y/techmagus-Architetto-Esperiment-chimico.webp" # Used in structured data as background image
-
-  #contact = "" # Primary email address
-  #phone = "" # Primary phone
-  #primarylocation = "" # Used as primary location if no specific is set
-
-  color = "#000000"
-  pricerange = "" # Used in structured data as price range
+	description = "Science and Technology Playground."
+	license = "https://im.youronly.one/p/legal-notice/"
+	keywords = ["YourOnly.One", "Yuki", "ᜌᜓᜃᜒ", "techmagus"] # Can be overriden per page
+	images = ["https://rsc.youronly.one/img/y/techmagus-smartphone-1920x1280.webp", "https://rsc.youronly.one/img/y/techmagus-Architetto-Esperiment-chimico.webp"]
+	#copyright = ""
 ### END: Structured Data ###
 
 ### BGN: Theme settings
-  #logoText = "techmagus"                                                     # We are not using this
-  logoType = "short" # long, short
-  #custom_css = []
-  #custom_js = []
-  useFaviconGenerator = false # https://www.favicon-generator.org/
-  meta_image = ""
-  themecolor = ""
+	#logoText = "techmagus"                                                     # We are not using this
+	logoType = "short" # long, short
+	#custom_css = []
+	#custom_js = []
+	useFaviconGenerator = false # https://www.favicon-generator.org/
+	meta_image = ""
+	themecolor = ""
 
-  themeOptions = ["kimbie", "solarized", "hacker", "light", "dark"]
-  notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
-  notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation", "resume"]
-  notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
-  notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
+	themeOptions = ["kimbie", "solarized", "hacker", "light", "dark"]
+	notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
+	notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation", "resume"]
+	notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
+	notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
 
-  viewportSize = "wide" # widest, wider, wide, normal, narrow
-  enableUiAnimation = true
-  hideSingleContentsWhenJSDisabled = false
-  enablePinnedPosts = true
-  minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
+	viewportSize = "wide" # widest, wider, wide, normal, narrow
+	enableUiAnimation = true
+	hideSingleContentsWhenJSDisabled = false
+	enablePinnedPosts = true
+	minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
 
-  # appbar
-  enableAppbarSearchIcon = true
-  enableAppbarLangIcon = true
+	# appbar
+	enableAppbarSearchIcon = true
+	enableAppbarLangIcon = true
 
-  # header
-  homeHeaderType = "text" # text, img, slide, typewriter
-  hideHomeHeaderWhenMobile = false
+	# header
+	homeHeaderType = "text" # text, img, slide, typewriter
+	hideHomeHeaderWhenMobile = false
 
-  # menu
-  showMobileMenuTerms = ["series", "categories", "tags"]
+	# menu
+	showMobileMenuTerms = ["series", "categories", "tags"]
 
-  # search
-  enableSearch = true
-  enableSearchHighlight = true
-  searchResultPosition = "side" # side, main
-  searchContent = true # include content to search index
-  searchDistance = 100 # fuse option
-  searchThreshold = 0.4 # 0.0: exact match, 1.0: any match
+	# search
+	enableSearch = true
+	enableSearchHighlight = true
+	searchResultPosition = "side" # side, main
+	searchContent = true # include content to search index
+	searchDistance = 100 # fuse option
+	searchThreshold = 0.4 # 0.0: exact match, 1.0: any match
 
-  # body
-  enableBreadcrumb = false
-  enableGoToTop = true
-  enableWhoami = false
-  summaryShape = "classic" # card, classic, compact
-  archiveGroupByDate = "2006-01" # "2006-01": group by month, "2006": group by year
-  archivePaginate = 10
-  paginateWindow = 1
-  talksPaginate = 5
-  talksGroupByDate = "2006-01"
-  pubPaginate = 20
-  writtenTimeIcon = "📅"
-  modifiedTimeIcon = "📝"
-  readingTimeIcon = "☕"
-  #authorIcon = "✍️"                                                            # We are not using this.
-  pagePvIcon = "👀"
-  pinIcon = "📌"
-  tagIcon = "🏷️"
-  publicationIcon = "📚"
-  typeIcon = "🎯"
+	# body
+	enableBreadcrumb = false
+	enableGoToTop = true
+	enableWhoami = false
+	summaryShape = "classic" # card, classic, compact
+	archiveGroupByDate = "2006-01" # "2006-01": group by month, "2006": group by year
+	archivePaginate = 10
+	paginateWindow = 1
+	talksPaginate = 5
+	talksGroupByDate = "2006-01"
+	pubPaginate = 20
+	writtenTimeIcon = "📅"
+	modifiedTimeIcon = "📝"
+	readingTimeIcon = "☕"
+	#authorIcon = "✍️"                                                            # We are not using this.
+	pagePvIcon = "👀"
+	pinIcon = "📌"
+	tagIcon = "🏷️"
+	publicationIcon = "📚"
+	typeIcon = "🎯"
 
-  # We are not using this
-  # whoami
-  #myname = ""
-  #email = ""
-  #whoami = ""
-  #bioImageUrl = ""
-  #useGravatar = false
-  #location = ""
-  #organization = ""
-  #link = ""
+	# We are not using this
+	# whoami
+	#myname = ""
+	#email = ""
+	#whoami = ""
+	#bioImageUrl = ""
+	#useGravatar = false
+	#location = ""
+	#organization = ""
+	#link = ""
 
-  # sidebar
-  enableBio = false
-  enableBioImage = true
-  enableSidebar = true
-  enableSidebarTags = true
-  enableSidebarSeries = true
-  enableSidebarCategories = true
-  enableSidebarChannels = false
-  enableHomeSidebarTitles = true
-  enableListSidebarTitles = true
-  enableToc = true
-  hideToc = false
-  tocFolding = true
-  tocPosition = "inner" # inner, outer
-  enableTocSwitch = false
-  itemsPerCategory = 5
-  sidebarPosition = "right"
-  tocLevels = ["h2", "h3", "h4"]
-  enableSidebarPostsByOrder = false
+	# sidebar
+	enableBio = false
+	enableBioImage = true
+	enableSidebar = true
+	enableSidebarTags = true
+	enableSidebarSeries = true
+	enableSidebarCategories = true
+	enableSidebarChannels = false
+	enableHomeSidebarTitles = true
+	enableListSidebarTitles = true
+	enableToc = true
+	hideToc = false
+	tocFolding = true
+	tocPosition = "inner" # inner, outer
+	enableTocSwitch = false
+	itemsPerCategory = 5
+	sidebarPosition = "right"
+	tocLevels = ["h2", "h3", "h4"]
+	enableSidebarPostsByOrder = false
 
-  # footer
-  showPoweredBy = true
-  showFeedLinks = true
-  showSocialLinks = true
-  enableLangChange = true
-  enableThemeChange = true
+	# footer
+	showPoweredBy = true
+	showFeedLinks = true
+	showSocialLinks = true
+	enableLangChange = true
+	enableThemeChange = true
 
-  # service
-  #googleTagManager = ""                                          # We already have this set on our own (see top of this file)
-  #baiduAnalytics = ""
-  enableBusuanzi = false
-  busuanziSiteUV = true
-  busuanziSitePV = true
-  busuanziPagePV = true
+	# service
+	#googleTagManager = ""                                          # We already have this set on our own (see top of this file)
+	#baiduAnalytics = ""
+	enableBusuanzi = false
+	busuanziSiteUV = true
+	busuanziSitePV = true
+	busuanziPagePV = true
 
-  # rss
-  updatePeriod = "" # Possible values: 'hourly', 'daily', 'weekly', 'monthly', or 'yearly'.
-  updateFrequency = ""
-  fullContents = true
+	# rss
+	updatePeriod = "" # Possible values: 'hourly', 'daily', 'weekly', 'monthly', or 'yearly'.
+	updateFrequency = ""
+	fullContents = true
 
-  # comment
-  enableComment = true
-  #disqus_shortname = ""                                          # We are using the default disqus param
-  commento = false
+	# comment
+	enableComment = true
+	#disqus_shortname = ""                                          # We are using the default disqus param
+	commento = false
 
-  [telegram]
-    enable = false
-    #siteId = ""
-    #dataLimit = 5
+	[telegram]
+		enable = false
+		#siteId = ""
+		#dataLimit = 5
 
-  #[gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
-    #owner = ""              # Your GitHub ID
-    #repo = ""               # The repo to store comments
-    #clientId = ""           # Your client ID
-    #clientSecret = ""       # Your client secret
+	#[gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
+		#owner = ""              # Your GitHub ID
+		#repo = ""               # The repo to store comments
+		#clientId = ""           # Your client ID
+		#clientSecret = ""       # Your client secret
 
-  #[utterances]       # https://utteranc.es/
-    #owner = ""              # Your GitHub ID
-    #repo = ""               # The repo to store comments
+	#[utterances]       # https://utteranc.es/
+		#owner = ""              # Your GitHub ID
+		#repo = ""               # The repo to store comments
 
-  #[gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
-    #owner = ""              # Your GitHub ID
-    #repo = ""               # The repo to store comments
-    #clientId = ""           # Your client ID
-    #clientSecret = ""       # Your client secret
+	#[gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
+		#owner = ""              # Your GitHub ID
+		#repo = ""               # The repo to store comments
+		#clientId = ""           # Your client ID
+		#clientSecret = ""       # Your client secret
 
-  # Valine.
-  # You can get your appid and appkey from https://leancloud.cn
-  # more info please open https://valine.js.org
-  [valine]
-    enable = false
-    #appId = '你的appId'
-    #appKey = '你的appKey'
-    #notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
-    #verify = false # Verification code
-    #avatar = 'mm' 
-    #placeholder = '说点什么吧...'
-    #visitor = false
+	# Valine.
+	# You can get your appid and appkey from https://leancloud.cn
+	# more info please open https://valine.js.org
+	[valine]
+		enable = false
+		#appId = '你的appId'
+		#appKey = '你的appKey'
+		#notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
+		#verify = false # Verification code
+		#avatar = 'mm' 
+		#placeholder = '说点什么吧...'
+		#visitor = false
 
-  #[changyan]
-    #changyanAppid = ""        # Changyan app id             # 畅言
-    #changyanAppkey = ""       # Changyan app key
+	#[changyan]
+		#changyanAppid = ""        # Changyan app id             # 畅言
+		#changyanAppkey = ""       # Changyan app key
 
-  #[livere]
-    #livereUID = ""            # LiveRe UID                  # 来必力
+	#[livere]
+		#livereUID = ""            # LiveRe UID                  # 来必力
 
-  # Isso: https://posativ.org/isso/
-  #[isso]
-    enable = false
-    #scriptSrc = "" # "https://isso.example.com/js/embed.min.js"
-    #dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
+	# Isso: https://posativ.org/isso/
+	#[isso]
+		enable = false
+		#scriptSrc = "" # "https://isso.example.com/js/embed.min.js"
+		#dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
-  # We are not using this
-  #[socialOptions]
-    #email = "mailto:your@email.com"
-    #phone = ""
-    #facebook = "http://example.org/"
-    #twitter = "http://example.org/"
-    #github = "https://github.com/zzossig/hugo-theme-zzo"
-    #stack-overflow = ""
-    #instagram = ""
-    #google-plus = ""
-    #youtube = ""
-    #medium = ""
-    #tumblr = ""
-    #linkedin = ""
-    #pinterest = ""
-    #stack-exchange = ""
-    #telegram = ""
-    #steam = ""
-    #weibo = ""
-    #douban = ""
-    #csdn = ""
-    #gitlab = ""
-    #mastodon = ""
-    #jianshu = ""
-    #zhihu = ""
-    #signal = ""
-    #whatsapp = ""
-    #matrix = ""
-    #xmpp = ""
-    #dev-to = ""
-    #gitea = ""
-    #google-scholar = ""
+	# We are not using this
+	#[socialOptions]
+		#email = "mailto:your@email.com"
+		#phone = ""
+		#facebook = "http://example.org/"
+		#twitter = "http://example.org/"
+		#github = "https://github.com/zzossig/hugo-theme-zzo"
+		#stack-overflow = ""
+		#instagram = ""
+		#google-plus = ""
+		#youtube = ""
+		#medium = ""
+		#tumblr = ""
+		#linkedin = ""
+		#pinterest = ""
+		#stack-exchange = ""
+		#telegram = ""
+		#steam = ""
+		#weibo = ""
+		#douban = ""
+		#csdn = ""
+		#gitlab = ""
+		#mastodon = ""
+		#jianshu = ""
+		#zhihu = ""
+		#signal = ""
+		#whatsapp = ""
+		#matrix = ""
+		#xmpp = ""
+		#dev-to = ""
+		#gitea = ""
+		#google-scholar = ""
 
-  # We are not using this
-  [donationOptions]
-    enable = false
-    #alipay = ""
-    #wechat = ""
-    #paypal = ""
-    #patreon = ""
+	# We are not using this
+	[donationOptions]
+		enable = false
+		#alipay = ""
+		#wechat = ""
+		#paypal = ""
+		#patreon = ""
 
-  # possible share name: ["facebook", "twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "telegram", "whatsapp", "pocket", "feedly", "hatena", "pinterest"]
-  [[share]]
-    name = "facebook"
-    username = "YourOnly.One0"
-  [[share]]
-    name = "hatena"
-  [[share]]
-    name = "line"
-  [[share]]
-    name = "linkedin"
-  [[share]]
-    name = "pinterest"
-  [[share]]
-    name = "reddit"
-  [[share]]
-    name = "telegram"
-  [[share]]
-    name = "tumblr"
-  [[share]]
-    name = "twitter"
-  [[share]]
-    name = "whatsapp"
+	# possible share name: ["facebook", "twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "telegram", "whatsapp", "pocket", "feedly", "hatena", "pinterest"]
+	[[share]]
+		name = "facebook"
+		username = "YourOnly.One0"
+	[[share]]
+		name = "hatena"
+	[[share]]
+		name = "line"
+	[[share]]
+		name = "linkedin"
+	[[share]]
+		name = "pinterest"
+	[[share]]
+		name = "reddit"
+	[[share]]
+		name = "telegram"
+	[[share]]
+		name = "tumblr"
+	[[share]]
+		name = "twitter"
+	[[share]]
+		name = "whatsapp"
 
-  # We are not using this, we edited the footer template directly
-  #[[footerLinks]]
-    #name = ""
-    #link = ""
-  #[[footerLinks]]
-    #name = ""
-    #link = ""
+	# We are not using this, we edited the footer template directly
+	#[[footerLinks]]
+		#name = ""
+		#link = ""
+	#[[footerLinks]]
+		#name = ""
+		#link = ""
 ### END: Theme settings
 
 ### BGN: Other Settings ###
-  [author]                                                    # .Param "author.key"
-    name = "ᜌᜓᜃᜒ (Yuki ・ 雪亮)"
-    email = ""
-    homepage = "https://youronly.one"
-    avatar = "https://rsc.youronly.one/img/y/Yuki_flag-square-300x.webp"
-    #emoji = "&#x1FAF0;&#x1F3FE;"
-    emoji = "❄️"
-    descriptionshort = "Born a writer and programmer."
-    descriptionlong = "Lives in the Philippines and have been writing and programming at a young age."
-    motto = "If this is not the end of oblivion, then I shall live everyday as if my life were to end on this very day."
-    locationorigin = "Philippines"
-    locationcurrent = "Philippines"
-    organization = "Yelosan Publishing"
+	[semweb]
+		org = "yelosan"																												# optional; filename of Org
+		person = "yuki"																											# optional; filename of Person founder of Org
 
-    rel = "me noopener"
-    #rel = "noopener external nofollow"
+		#issn = ""																												# optional
+		acquireLicensePage = "https://youronly.one/p/legal-notice"																					# optional; URL to Page with info on how to acquire license to works
+		creator = "https://iam.youronly.one/#yuki"																										# optional; format: URL/#fragment-identifier
+		copyrightHolder = "https://iam.youronly.one/#yuki"																						# optional; format: URL/#fragment-identifier of Org or Person
+		copyrightNotice = "Copyleft 🄯 CC-BY-SA 4.0 International by JC John Sese Cuneta"																						# optional; example: Copyleft 🄯 CC-BY-SA 4.0 International by Rabbit and Turtle, LLC.
+		creditText = "YourOnly.One (https://youronly.one)"																									# optional; example: My Website (https://example.com)
+		dateFirstPublished = "2003-12-12"																					# optional; YYYY-MM-DD first published
+		license = "https://youronly.one/p/legal-notice"																										# optional; URL to License Page; this is for your Site-level license
+		publisher = "https://yelosan.youronly.one/"																									# optional; format: URL/
+		sameAs = ["https://fb.com/339301830572387/", "https://fb.me/YourOnly.One0/", "https://instagram.com/YourOnly.One/", "https://twitter.com/YourOnlyOne7", "https://youtube.com/youronlyone7"]																										# optional
 
-    ### BGN: Wishlist ###
-      [[author.gift]]
-        name = "Amazon"
-        code = ""
-        url = "https://www.amazon.com/hz/wishlist/ls/1YHYZNMDYDDB6/ref=nav_wishlist_lists_1?_encoding=UTF8&type=wishlist"
-        linktitle = "Wishlist"
-        tag = ""
-        message = "I love to read. A review is guaranteed for the book you will send as a gift."
-        type = "wishlist"
-      [[author.gift]]
-        name = "Steam"
-        code = ""
-        url = "https://store.steampowered.com/wishlist/profiles/76561197997196684/#sort=order&discount_any=1"
-        linktitle = "Wishlist"
-        tag = ""
-        message = ""
-        type = "wishlist"
-    ### END: Wishlist ###
 
-    ### BGN: Affiliate codes ###
-      [[author.gift]]
-        name = "Amazon"
-        code = "youronlyone-20"
-        url = "https://www.amazon.com?&_encoding=UTF8&tag=youronlyone-20&linkCode=ur2&linkId=387918b08ede21983ce5efc57f10361f&camp=1789&creative=9325"
-        linktitle = "youronlyone-20"
-        tag = ""
-        message = ""
-        type = "affiliate"
-    ### END: Affiliate codes ###
-
-    ### BGN: Tip Jar ###
-      #[[author.gift]]
-      #  name = "Coins.ph"
-      #  code = ""
-      #  url = ""
-      #  linktitle = ""
-      #  tag = ""
-      #  message = ""
-      #  type = "tip jar"
-      [[author.gift]]
-        name = "Flattr"
-        code = ""
-        url = "https://flattr.com/@YourOnlyOne"
-        linktitle = "@YourOnlyOne"
-        tag = ""
-        message = ""
-        type = "tip jar"
-      #[[author.gift]]
-      #  name = "GCash"
-      #  code = ""
-      #  url = ""
-      #  linktitle = ""
-      #  tag = ""
-      #  message = ""
-      #  type = "tip jar"
-      [[author.gift]]
-        name = "PayPal"
-        code = ""
-        url = "https://paypal.me/yukino"
-        linktitle = ""
-        tag = ""
-        message = ""
-        type = "tip jar"
-    ### END: Tip Jar ###
-
-    ### BGN: Cryptocurrency ###
-      [[author.gift]]
-        name = "XLM (Stellar)"
-        code = "yukino*keybase.io"
-        url = ""
-        linktitle = ""
-        tag = "gift for https://youronly.one"
-        message = ""
-        type = "cryptocurrency"
-      [[author.gift]]
-        name = "USDC (Stellar)"
-        code = "yukino*keybase.io"
-        url = ""
-        linktitle = ""
-        tag = "gift for https://youronly.one"
-        message = ""
-        type = "cryptocurrency"
-      [[author.gift]]
-        name = "XRP (XRPL)"
-        code = "rU2mEJSLqBRkYLVTv55rFTgQajkLTnT6mA"
-        url = ""
-        linktitle = ""
-        tag = "246013"
-        message = ""
-        type = "cryptocurrency"
-      [[author.gift]]
-        name = "ETH (ERC-20)"
-        code = "0x739d2aae2a5b7a4e1d64c58d121c9d908d706c83"
-        url = ""
-        linktitle = ""
-        tag = ""
-        message = ""
-        type = "cryptocurrency"
-      [[author.gift]]
-        name = "USDC (ERC-20)"
-        code = "0x739d2aae2a5b7a4e1d64c58d121c9d908d706c83"
-        url = ""
-        linktitle = ""
-        tag = ""
-        message = ""
-        type = "cryptocurrency"
-      [[author.gift]]
-        name = "XBT (Bitcoin)"
-        code = "32w1De4wvr5jEzC4g5P4rkjvqg2bvMR8Vk"
-        url = ""
-        linktitle = ""
-        tag = ""
-        message = ""
-        type = "cryptocurrency"
-      [[author.gift]]
-        name = "BCH (BCHN)"
-        code = "pp8fkmchlu6a7c53a2s682jd70mncrzemsthca6ftl"
-        url = ""
-        linktitle = ""
-        tag = ""
-        message = ""
-        type = "cryptocurrency"
-    ### END: Cryptocurrency ###
-
-  [siteowner]
-    given_name = "Yahuhanan Yukia"
-    middle_name = "Sese"
-    family_name = "Cuneta"
-
-  [semweb.publisher]
-    name = "YourOnly.One"
-    sameas = "https://youronly.one"
-
-  [verify]
-    flattr = "4j1gl5"
-    naver = "0212955cb24d6e2c67f92be3c7833cae8a98fa8e"
-    wot = "06c7ef6e7986586661ef"
+	[verify]
+		flattr = "4j1gl5"
+		naver = "0212955cb24d6e2c67f92be3c7833cae8a98fa8e"
+		wot = "06c7ef6e7986586661ef"
 ### END: Other Settings ###
