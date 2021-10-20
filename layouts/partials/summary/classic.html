@@ -1,4 +1,6 @@
 {{/* YourOnly.One: THIS SHOWS IN HOMEPAGE */}}
+{{- $authors := .Site.Data.persons -}}
+{{- $siteAuthor := index $authors ($.Param "semweb.person") }}
 <article class="summary-classic" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
   <div class="summary-classic__flex-box" {{ if eq ($.Param "sidebarPosition") "left" }}data-position="left"{{ end }}>
     {{- /* YourOnly.One: changed
@@ -37,8 +39,11 @@
             &middot; <span title="{{ i18n "single-writtenBy" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">{{ if $.Param "authorEmoji" }}{{ $.Param "authorEmoji" }}{{ else }}{{ ($.Site.Params.authorIcon | safeHTML) | default "✍️" }}{{ end }}&nbsp;{{ . }}</span>
             {{ end }}
           */ -}}
-          {{ with $.Param "author.name" }}
-            &middot; <span title="{{ i18n "single-writtenBy" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">{{ $.Param "author.emoji" | default "🖋️" }}&nbsp;{{ . }}</span>
+          {{ with $.Param "author.person" }}
+            {{ $author := index $authors . }}
+            &middot; <span title="{{ i18n "single-writtenBy" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">{{ (or ($.Param "author.emoji") ($author.emoji)) | default "🖋️" }}&nbsp;{{ ($.Param "author.name") | default $author.name }}</span>
+          {{ else }}
+            &middot; <span title="{{ i18n "single-writtenBy" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">{{ $siteAuthor.emoji | default "🖋️" }}&nbsp;{{ $siteAuthor.name }}</span>
           {{ end }}
         </h6>
       </header>
