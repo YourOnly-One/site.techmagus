@@ -1,5 +1,8 @@
 {{/* YourOnly.One: THIS SHOWS IN SINGLE */}}
 {{ $params := .Params }}
+{{- $datapersons := .Site.Data.persons -}}
+{{- $semwebpersons := .Site.Params.semweb.persons -}}
+{{- $frontmatterpersons := .Params.authors }}
 <div class="single__infos">
   <time class="single__info" title="{{ i18n "tooltip-written" }}">{{ ($.Site.Params.writtenTimeIcon | safeHTML) | default "📅" }}&nbsp;{{ .Date.Format (i18n "single-dateformat") }} </time>
   {{ if ne (.Date.Format (i18n "summary-dateformat")) (.Lastmod.Format (i18n "summary-dateformat")) }}
@@ -11,8 +14,17 @@
       &nbsp;&middot;&nbsp; <span class="single__info" title="{{ i18n "single-writtenBy" }}">{{if $params.AuthorEmoji }}{{ $params.AuthorEmoji }}{{ else }}{{ ($.Site.Params.authorIcon | safeHTML) | default "✍️" }}{{ end }}&nbsp;{{ . }}</span>
     {{ end }}
   */ -}}
-  {{ with $.Param "author.name" }}
-    &nbsp;&middot;&nbsp; <span class="single__info" title="{{ i18n "single-writtenBy" }}">{{ $.Param "author.emoji" | default "🖋️" }}&nbsp;{{ . }}</span>
+  {{ if $frontmatterpersons }}{{ range $i, $frontmatterperson := index $frontmatterpersons }}{{ $dataperson := index $datapersons $frontmatterperson.person }}{{ if $i }}, {{ end }}
+    {{- /* note: if [[authors]] is set in frontmatter, use this to display a list of persons with fallback to /data/persons/ if present */}}
+    &nbsp;&middot;&nbsp; <span class="single__info" title="{{ i18n "single-writtenBy" }}">{{ or ($frontmatterperson.emoji) ($dataperson.emoji) | default "🖋️" }}&nbsp;{{ or ($frontmatterperson.name) ($dataperson.name) }}</span>
+    {{ end }}
+  {{ else if $semwebpersons }}{{ range $i, $semwebperson := index $semwebpersons }}{{ $dataperson := index $datapersons $semwebperson.person }}{{ if $i }}, {{ end }}
+    {{- /* note: else if [[semweb.persons]] is set in config file, use it to display a list of persons with fallback to /data/persons/ if present */}}
+    &nbsp;&middot;&nbsp; <span class="single__info" title="{{ i18n "single-writtenBy" }}">{{ or ($semwebperson.emoji) ($dataperson.emoji) | default "🖋️" }}&nbsp;{{ or ($semwebperson.name) ($dataperson.name) }}</span>
+    {{ end }}
+  {{ else if .Param "author" }}
+    {{- /* note: else if default Hugo 'author' param is used in frontmatter or config, display generic */}}
+    &nbsp;&middot;&nbsp; <span class="single__info" title="{{ i18n "single-writtenBy" }}">{{ .Param "author.emoji" | default "🖋️" }}&nbsp;{{ .Param "author.name" }}</span>
   {{ end }}
   <span class="single__info">
     {{ if (and .Site.Params.enableBusuanzi .Site.Params.busuanziPagePV) }} &middot; {{ ($.Site.Params.pagePvIcon | safeHTML) | default "👀" }}<span id="busuanzi_value_page_pv">...</span> {{ i18n "counter-page-pv" }}{{ end }}
