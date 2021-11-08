@@ -2,7 +2,7 @@
 {{- $datapersons := .Site.Data.persons -}}
 {{- $semwebpersons := .Site.Params.semweb.persons -}}
 {{- $frontmatterpersons := .Params.authors }}
-<article class="summary-classic" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
+<article class="summary-classic" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}" data-clarity-region="article">
   <div class="summary-classic__flex-box" {{ if eq ($.Param "sidebarPosition") "left" }}data-position="left"{{ end }}>
     {{- /* YourOnly.One: changed
       {{ if and (or ($.Param "featured_image") ($.Param "summary_image")) (eq ($.Param "sidebarPosition") "right") }}
