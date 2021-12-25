@@ -45,6 +45,27 @@
     </section>
     <hr class="hr-fade sidebar-hr" />
 
+    <section id="bookmarks" class="sidebar-recent">
+        <span class="sidebar-recent__title p2">{{ i18n "bookmarks" }}</span>
+        <ul class="sidebar-recent__ul">
+            <li><a href="https://im.youronly.one/p/linklist/" class="sidebar-recent__a p2" rel="me noopener">YourOnly.One Linklist</a></li>
+            <li><a href="https://im.youronly.one/techmagus/linklists-are-back-2021353/" class="sidebar-recent__a p2" rel="me noopener">Linklists Are Back</a></li>
+            <li><a href="https://semweb.youronly.one" class="sidebar-recent__a p2" rel="noopener external">Semantic Web for Hugo</a></li>
+        </ul>
+    </section>
+    <hr class="hr-fade sidebar-hr" />
+
+    <section id="yuki_network" class="sidebar-recent">
+        <span class="sidebar-recent__title p2">{{ i18n "yukinetwork" }}</span>
+        <ul class="sidebar-recent__ul">
+            <li><a href="https://im.youronly.one/snoworld/" class="sidebar-recent__a p2" rel="me noopener">Snoworld</a></li>
+            <li><a href="https://im.youronly.one/way/" class="sidebar-recent__a p2" rel="me noopener">Way of Believers</a></li>
+            <li><a href="https://im.youronly.one/love/" class="sidebar-recent__a p2" rel="me noopener">Love &amp; Relationship</a></li>
+            <li><a href="https://im.youronly.one/yuki/" class="sidebar-recent__a p2" rel="me noopener">YOOki Chronicles</a></li>
+        </ul>
+    </section>
+    <hr class="hr-fade sidebar-hr" />
+
     {{ if and ($.Param "itemsPerCategory") ($.Param "enableHomeSidebarTitles") }}
         {{ $filteredSections := .Site.Sections }}
         {{ range $.Param "notAllowedTypesInHomeSidebar" }}
