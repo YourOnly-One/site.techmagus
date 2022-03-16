@@ -29,7 +29,16 @@
     </div>
     <article class="single__contents" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}" data-clarity-region="article">
       {{ partial "body/toc" . }}
-      {{ .Content }}
+
+      {{- /* BGN: YourOnly.One: changed */ -}}
+        {{- /* .Content */ -}}
+
+        {{- $inserthere := `<div role="cover-image-attributions">` -}}
+        {{- $insertcontent := partial "youronly.one-content-partof.html" . -}}
+        {{- $joined := print $insertcontent $inserthere -}}
+        {{- $content := replace .Content $inserthere $joined 1 -}}
+        {{ $content | safeHTML }}
+      {{- /* END: YourOnly.One: changed */ -}}
     </article>
     
     {{ partial "script/clipboard-script" . }}

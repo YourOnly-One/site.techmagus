@@ -46,6 +46,12 @@
   <div class="toc {{ if $.Param "hideToc" }}hide{{ end }}" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-folding="{{ if $.Param "tocFolding" }}true{{ else }}false{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}" style="position: revert;">
     {{ .TableOfContents }}
   </div>
+
+  {{- /* BGN: YourOnly.One Content-PartOf */ -}}
+    {{- if templates.Exists "partials/youronly.one-content-partof.html" -}}
+      {{ partial "youronly.one-content-partof.html" . }}
+    {{- end }}
+  {{- /* END: YourOnly.One Content-PartOf */ -}}
 </section>
 
 {{ end }}
