@@ -6,6 +6,7 @@ rssfull = "true"
 faviconcache = "fmgy"
 faviconbuster = "TimmieIsMyFate"
 jquerycdn = true
+websubhubs = ["https://pubsubhubbub.appspot.com/", "https://youronlyone.superfeedr.com/", "https://pubsubhubbub.superfeedr.com/", "https://websubhub.com/hub"]
 
 googleadsense = "ca-pub-8360283248006398"
 
@@ -166,7 +167,7 @@ googleadsense = "ca-pub-8360283248006398"
 		#appKey = '你的appKey'
 		#notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
 		#verify = false # Verification code
-		#avatar = 'mm' 
+		#avatar = 'mm'
 		#placeholder = '说点什么吧...'
 		#visitor = false
 
