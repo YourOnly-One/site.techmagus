@@ -39,6 +39,17 @@
       lang = "ko"
   # END: /techmagus/ content
 
+  # BGN: /techmagus/ fill gaps content
+    #[[imports.mounts]]
+    #  source = "techmagus/en-ph"
+    #  target = "content"
+    #  lang = "ja"
+    #[[imports.mounts]]
+    #  source = "techmagus/en-ph"
+    #  target = "content"
+    #  lang = "ko"
+  # END: /techmagus/ fill gaps content
+
 
 # See: https://gohugo.io/hugo-modules/configuration/#module-config-mounts
 #   if you add a mounts section you should remove the old staticDir etc. settings.
