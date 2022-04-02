@@ -1,0 +1,22 @@
+<nav class="navbar scrolling" role="navigation" aria-label="main navigation" data-dir="{{ if $.Param "navbardir" }}{{ $.Param "navbardir" }}{{ else }}{{ $.Param "languagedir" | default "ltr" }}{{ end }}">
+  <div class="navbar__brand">
+    {{ if $.Param "logo" | default true }}
+      {{/* YourOnly.One: changed */}}
+      <a href="{{ "/" | relLangURL }}" title="{{ i18n "home" }}" rel="{{ i18n "home" }}" class="{{ if eq ($.Param "logoType") "long" }}navbar__long-link{{ else }}navbar__logo-link{{ end }}">
+        {{/* YourOnly.One: changed */}}
+        <img src="{{ or ($.Site.Params.logourl) ("/logo.png" | relURL) }}" alt="{{ i18n "home" }}" class="navbar__logo">
+      </a>
+    {{ else }}
+    &nbsp;&nbsp;
+    {{ end }}
+    {{ if ne .Site.Params.logoType "long" }}
+      {{/* YourOnly.One: changed */}}
+      <a href="{{ "/" | relLangURL }}" title="{{ i18n "home" }}" rel="{{ i18n "home" }}" class="navbar__title-link">
+        <h6 class="navbar__title">{{ or (.Site.Title) (.Site.Params.logoText) }}</h6>
+      </a>
+    {{ end }}
+  </div>
+
+  {{ partial "navbar/nav-menu-mobile" . }}
+  {{ partial "navbar/nav-menu" . }}
+</nav>

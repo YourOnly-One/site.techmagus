@@ -1,0 +1,23 @@
+{
+  "name": "techmagus",
+  "short_name": "techmagus",
+  "description": "Science and Technology Playground",
+  "dir": "auto",
+  "lang": "en-PH",
+  "categories": ["education", "personalization", "science", "security", "technology", "utilities"],
+  "display": "minimal-ui",
+  "scope": "https://im.youronly.one/techmagus/",
+  "start_url": "https://im.youronly.one",
+  "icons": [
+    {
+      "src": "https://rsc.youronly.one/favicon/techmagus/android-chrome-192x192.png?fmgy=TimmieIsMyFate",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://rsc.youronly.one/favicon/techmagus/android-chrome-512x512.png?fmgy=TimmieIsMyFate",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

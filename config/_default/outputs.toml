@@ -1,0 +1,14 @@
+# home/atom.xml
+home = ["HTML", "Atom", "RSS", "SearchIndex"]                            # default: HTML, RSS
+
+# home/section/PAGE-POST/atom.xml
+page = ["HTML"]                            # default: HTML
+
+# home/SECTION/atom.xml
+section = ["HTML", "SearchIndex"]                         # default: HTML, RSS
+
+# home/TAXONOMY/atom.xml
+taxonomy = ["HTML", "SearchIndex"]                        # default: HTML, RSS
+
+# home/taxonomy/TERM/atom.xml
+term = ["HTML", "SearchIndex"]                            # default: HTML, RSS

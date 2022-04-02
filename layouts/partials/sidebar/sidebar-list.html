@@ -1,0 +1,95 @@
+{{/* YourOnly.One: SIDEBAR EVERYWHERE EXCEPT HOMEPAGE */}}
+{{ if $.Param "enableSidebar" }}
+    <ul class="sidebar">
+        {{ partial "search/site-search" . }}
+        {{ partial "sidebar/custom-list" . }}
+        {{ partial "sidebar/list/posts-by-order" . }}
+
+        {{ if and ($.Param "itemsPerCategory") ($.Param "enableListSidebarTitles") }}
+            <span class="sidebar-recent__title p2" style="color: revert;">{{ .Title }}</span>
+            {{ range first ($.Param "itemsPerCategory") .Pages }}
+            <li class="sidebar-recent">
+                <a href="{{ .RelPermalink }}" class="sidebar-recent__title p1">{{ .Title }}</a>
+            </li>
+            {{ end }}
+            <hr class="hr-fade sidebar-hr" />
+        {{ end }}
+    </ul>
+
+    <section id="Now_Playing-LastFM">
+        <!--
+            Developed by Prashant Shrestha
+            + https://prashant.me
+        -->
+        <!--
+            * Modified by ᜌᜓᜃᜒ (Yuki ・ 雪亮) 🇵🇭
+            *   - https://YourOnly.One
+            *
+            * 2021-01-31:
+            *   - Added trackalbum
+            *   - Moved emoji outside of js file into HTML area
+            * 2021-01-30: Switched to Emoji instead of icon files
+        --->
+        <link rel="stylesheet" property="stylesheet" href="https://rsc.youronly.one/css/LastFM-NowPlaying.min.css" />
+        <script src="https://rsc.youronly.one/js/LastFM-NowPlaying.min.js" defer="defer"></script>
+        <div class="nowplayingcard">
+            <div class="nowplayingcontainer-inner">
+                <img id="trackart" src="#">
+                <div class="trackInfo">
+                    <span class='emoji'>🎧</span><a id="tracktitle"></a><br/>
+                    <span class='emoji'>📀</span><a id="trackalbum"></a><br/>
+                    <span class='emoji'>🎤</span><a id="trackartist"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="hr-fade sidebar-hr" />
+
+    <section id="bookmarks" class="sidebar-recent">
+        <span class="sidebar-recent__title p2">{{ i18n "bookmarks" }}</span>
+        <ul class="sidebar-recent__ul">
+            <li><a href="https://im.youronly.one/p/linklist/" class="sidebar-recent__a p2" rel="me noopener">YourOnly.One Linklist</a></li>
+            <li><a href="https://im.youronly.one/techmagus/linklists-are-back-2021353/" class="sidebar-recent__a p2" rel="me noopener">Linklists Are Back</a></li>
+            <li><a href="https://semweb.youronly.one" class="sidebar-recent__a p2" rel="noopener external">Semantic Web for Hugo</a></li>
+        </ul>
+    </section>
+    <hr class="hr-fade sidebar-hr" />
+
+    <section id="yuki_network" class="sidebar-recent">
+        <span class="sidebar-recent__title p2">{{ i18n "yukinetwork" }}</span>
+        <ul class="sidebar-recent__ul">
+            <li><a href="https://im.youronly.one/snoworld/" class="sidebar-recent__a p2" rel="me noopener">Snoworld</a></li>
+            <li><a href="https://im.youronly.one/way/" class="sidebar-recent__a p2" rel="me noopener">Way of Believers</a></li>
+            <li><a href="https://im.youronly.one/love/" class="sidebar-recent__a p2" rel="me noopener">Love &amp; Relationship</a></li>
+            <li><a href="https://im.youronly.one/yuki/" class="sidebar-recent__a p2" rel="me noopener">YOOki Chronicles</a></li>
+        </ul>
+    </section>
+    <hr class="hr-fade sidebar-hr" />
+
+    {{ if and ($.Param "itemsPerCategory") ($.Param "enableHomeSidebarTitles") }}
+        {{ $filteredSections := .Site.Sections }}
+        {{ range $.Param "notAllowedTypesInHomeSidebar" }}
+            {{ $filteredSections = (where $filteredSections "Type" "!=" (lower .)) }}
+        {{ end }}
+
+        {{ range $filteredSections }}
+        <section class="sidebar-recent">
+            <a href="{{ .RelPermalink }}" class="sidebar-recent__title p2">{{ .Title }}</a>
+            <ul class="sidebar-recent__ul">
+                {{ range first ($.Param "itemsPerCategory") .Pages }}
+                    <li>
+                        <a href="{{ .RelPermalink }}" class="sidebar-recent__a p2">{{ .Title }}</a>
+                    </li>
+                {{ end }}
+            </ul>
+        </section>
+        <hr class="hr-fade sidebar-hr" />
+        {{ end }}
+    {{ end }}
+
+    <div class="taxo-root">
+    {{ partial "taxonomy/taxonomy-series" . }}
+    {{ partial "taxonomy/taxonomy-categories" . }}
+    {{ partial "taxonomy/taxonomy-tags" . }}
+    </div>
+{{ end }}
