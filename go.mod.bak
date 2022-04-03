@@ -1,4 +1,4 @@
-module techmagus
+module gitlab.com/youronlyone/site.techmagus
 
 go 1.18
 
