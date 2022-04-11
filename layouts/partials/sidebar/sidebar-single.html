@@ -1,8 +1,9 @@
 {{ if $.Param "enableSidebar" }}
 {{ if and (or ($.Param "enableToc") ($.Param "toc")) (ne ($.Param "tocPosition") "outer") }}
 
-<section class="sidebar hide" style="position: fixed;">
-  <script>document.querySelector('.sidebar').classList.remove('hide')</script>
+<section class="sidebar hide sidebarfixed">
+  {{- /* NOTE: moved to /assets/ for CSP compatibility */ -}}
+  <script src="{{ (resources.Get "js/sidebar-single.js" | minify).RelPermalink }}" crossorigin="anonymous" defer="defer"></script>
 
   <section id="Now_Playing-LastFM">
     <!--
@@ -33,7 +34,7 @@
   </section>
   <hr class="hr-fade sidebar-hr" />
 
-  <div class="toc__flexbox" data-position="{{ if $.Param "hideToc" }}absolute{{ else }}fixed{{ end }}" style="position: revert;">
+  <div class="toc__flexbox positionrevert" data-position="{{ if $.Param "hideToc" }}absolute{{ else }}fixed{{ end }}">
     <h6 class="toc__title" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">{{ i18n "toc-label" }}</h6>
     {{ if $.Param "enableTocSwitch" }}
       <label class="switch" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
@@ -43,7 +44,7 @@
     {{ end }}
   </div>
   <br/>
-  <div class="toc {{ if $.Param "hideToc" }}hide{{ end }}" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-folding="{{ if $.Param "tocFolding" }}true{{ else }}false{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}" style="position: revert;">
+  <div class="toc {{ if $.Param "hideToc" }}hide {{ end }}positionrevert" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-folding="{{ if $.Param "tocFolding" }}true{{ else }}false{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
     {{ .TableOfContents }}
   </div>
 

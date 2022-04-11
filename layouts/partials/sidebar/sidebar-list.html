@@ -6,7 +6,7 @@
         {{ partial "sidebar/list/posts-by-order" . }}
 
         {{ if and ($.Param "itemsPerCategory") ($.Param "enableListSidebarTitles") }}
-            <span class="sidebar-recent__title p2" style="color: revert;">{{ .Title }}</span>
+            <span class="sidebar-recent__title p2 colorrevert">{{ .Title }}</span>
             {{ range first ($.Param "itemsPerCategory") .Pages }}
             <li class="sidebar-recent">
                 <a href="{{ .RelPermalink }}" class="sidebar-recent__title p1">{{ .Title }}</a>

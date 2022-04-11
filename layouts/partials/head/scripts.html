@@ -1,0 +1,51 @@
+{{- $tocFolding := $.Param "tocFolding" | jsonify -}}
+{{- $tocLevels := $.Param "tocLevels" | jsonify -}}
+{{- $skinDarkCode := i18n "skin-dark" | jsonify -}}
+{{- $skinLightCode := i18n "skin-light" | jsonify -}}
+{{- $skinHackerCode := i18n "skin-hacker" | jsonify -}}
+{{- $skinSolarizedCode := i18n "skin-solarized" | jsonify -}}
+{{- $skinKimbieCode := i18n "skin-kimbie" | jsonify -}}
+{{- $baseurl := $.Site.BaseURL | jsonify -}}
+{{- $permalink := .Permalink | jsonify -}}
+{{- $langprefix := $.Site.LanguagePrefix | jsonify -}}
+{{- $enableSearch := $.Param "enableSearch" | jsonify -}}
+{{- $searchDistance := $.Param "searchDistance" | jsonify -}}
+{{- $searchThreshold := $.Param "searchThreshold" | jsonify -}}
+{{- $searchContent := $.Param "searchContent" | jsonify -}}
+{{- $enableSearchHighlight := $.Param "enableSearchHighlight" | jsonify -}}
+{{- $searchResultPosition := $.Param "enableResultPosition" | jsonify -}}
+{{- $sectionType := .Type | jsonify -}}
+{{- $kind := .Kind | jsonify -}}
+
+{{- $scriptsjs := resources.Get "js/theme-scripts.js" -}}
+{{- $scriptsjsvars := dict "tocFolding" $tocFolding "tocLevels" $tocLevels "skinDarkCode" $skinDarkCode "skinLightCode" $skinLightCode "skinHackerCode" $skinHackerCode "skinSolarizedCode" $skinSolarizedCode "skinKimbieCode" $skinKimbieCode "baseurl" $baseurl "permalink" $permalink "langprefix" $langprefix "enableSearch" $enableSearch "searchDistance" $searchDistance "searchThreshold" $searchThreshold "searchContent" $searchContent "enableSearchHighlight" $enableSearchHighlight "searchResultPosition" $searchResultPosition "sectionType" $sectionType "kind" $kind -}}
+{{- $scriptsjs = $scriptsjs | js.Build ( dict "params" $scriptsjsvars ) | minify -}}
+
+{{ if .Site.Params.custom_js }}
+{{ range .Site.Params.custom_js }}
+  {{ $custom_template := resources.Get . }}
+  {{ if $custom_template }}
+    {{ $custom_js := $custom_template | resources.Minify | resources.Fingerprint }}
+    <script defer src="{{ $custom_js.RelPermalink }}"></script>
+  {{ end }}
+{{ end }}
+{{ end }}
+
+{{ if $.Param "enableSearch" }}
+  {{ $fuse := resources.Get "js/fuse.min.js" | resources.Fingerprint }}
+  <script defer src="{{ $fuse.RelPermalink }}"></script>
+{{ end }}
+
+{{ $enquire := resources.Get "js/enquire.min.js" | resources.Fingerprint }}
+<script src="{{ $enquire.RelPermalink }}"></script>
+{{ $lazysizes := resources.Get "js/lazysizes.min.js" | resources.Fingerprint }}
+<script defer src="{{ $lazysizes.RelPermalink }}"></script>
+{{ $getParents := resources.Get "js/helper/getParents.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $getParents.RelPermalink }}"></script>
+{{ $fadeinout := resources.Get "js/helper/fadeinout.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $fadeinout.RelPermalink }}"></script>
+{{ $closest := resources.Get "js/helper/closest.js" | resources.Minify }}
+<script defer src="{{ $closest.RelPermalink }}"></script>
+
+{{- /* NOTE: moved to /assets/ for CSP compatibility */ -}}
+<script src="{{ $scriptsjs.RelPermalink }}" crossorigin="anonymous" defer="defer"></script>

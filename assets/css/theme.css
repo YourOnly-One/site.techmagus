@@ -1,0 +1,13 @@
+.colorrevert {
+  color: revert;
+}
+.sidebarfixed {
+  position: fixed;
+}
+.positionrevert {
+  position: revert;
+}
+.enablesearch {
+  position: absolute;
+  top: 0;
+}

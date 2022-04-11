@@ -1,5 +1,12 @@
 {{ define "main" }}
 {{/* YourOnly.One: POST VIEW */}}
+{{- $enableToc := $.Param "enableToc" | jsonify -}}
+{{- $toc := $.Param "toc" | jsonify -}}
+{{- $tocPosition := $.Param "tocPosition" | jsonify -}}
+
+{{- $single02js := resources.Get "js/single-02.js" | minify -}}
+{{- $single02jsvars := dict "enableToc" $enableToc "toc" $toc "tocPosition" $tocPosition }}
+{{- $single02js = $single02js | js.Build ( dict "params" $single02jsvars ) -}}
 
 <main class="single__main {{ if or ($.Param "enableToc") ($.Param "toc") }}{{ if $.Param "hideToc" }}main{{ else if eq ($.Param "tocPosition") "outer" }}main{{ else }}main-main{{ end }}{{ else }}main{{ end }}">
   {{ if $.Param "enableBreadcrumb" }}
@@ -14,7 +21,9 @@
   {{ end }}
   <div class="single {{ if $.Param "hideSingleContentsWhenJSDisabled" }}hide{{ end }}">
     <div class="single__nojs">{{ i18n "nojs-message" }}</div>
-    <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
+    {{- /* NOTE: moved to /assets/ for CSP compatibility */ -}}
+    <script src="{{ (resources.Get "js/single-01.js" | minify).RelPermalink }}" crossorigin="anonymous" defer="defer"></script>
+
     {{/* YourOnly.One: new addition */}}
     {{ with .Params.images }}
       <div class="txt_center" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
@@ -40,7 +49,7 @@
         {{ $content | safeHTML }}
       {{- /* END: YourOnly.One: changed */ -}}
     </article>
-    
+
     {{ partial "script/clipboard-script" . }}
     {{ partial "script/codeblock-script" . }}
     {{ partial "body/share" . }}
@@ -69,67 +78,7 @@
   {{ partial "sidebar/sidebar-single" . }}
 </aside>
 {{ end }}
-<script>
-  {{ $enableToc:= $.Param "enableToc" }}
-  {{ $toc:= $.Param "toc" }}
-  {{ $tocPosition:= $.Param "tocPosition" }}
-
-  var enableToc = JSON.parse({{ $enableToc | jsonify }});
-  var toc = JSON.parse({{ $toc | jsonify }});
-  var tocPosition = JSON.parse({{ $tocPosition | jsonify }});
-  
-  var singleMainElem = document.querySelector('.single__main');
-  var singleSideElem = document.querySelector('.single__side');
-
-  enquire.register("screen and (max-width: 769px)", {
-    match: function () {
-      if ((enableToc || toc) && tocPosition !== "outer") {
-        if (singleMainElem && singleSideElem) {
-          singleMainElem.classList.remove('main-main');
-          singleMainElem.classList.add('main');
-          singleSideElem.classList.remove('main-side');
-          singleSideElem.classList.add('hide');
-        }
-      } else if (tocPosition === "outer") {
-        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
-          singleMainElem.classList.remove('main-main');
-          singleMainElem.classList.add('main');
-        }
-        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
-          singleSideElem.classList.add('hide');
-        }
-      }
-    },
-    unmatch: function () {
-      if ((enableToc || toc) && tocPosition !== "outer") {
-        singleMainElem.classList.remove('main');
-        singleMainElem.classList.add('main-main');
-        singleSideElem.classList.remove('hide');
-        singleSideElem.classList.add('main-side');
-      } else if (tocPosition === "outer") {
-        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
-          singleMainElem.classList.remove('main-main');
-          singleMainElem.classList.add('main');
-        }
-        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
-          singleSideElem.classList.add('hide');
-        }
-      }
-
-      var navCollapseBtn = document.querySelector('.navbar__burger');
-      var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
-      if (navCollapse) {
-        navCollapse.setAttribute('data-open', false);
-        navCollapse.style.maxHeight = 0;
-        navCollapseBtn.classList.remove('is-active');
-      }
-      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
-      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
-    },
-    setup: function () { },
-    deferSetup: true,
-    destroy: function () { },
-  });
-</script>
+{{- /* NOTE: moved to /assets/ for CSP compatibility */ -}}
+<script src="{{ $single02js.RelPermalink }}" crossorigin="anonymous" defer="defer"></script>
 {{ partial "script/single-script" . }}
 {{ end }}
