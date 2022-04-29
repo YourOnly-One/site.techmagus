@@ -271,7 +271,9 @@ googleadsense = "ca-pub-8360283248006398"
 		license = "https://im.youronly.one/p/legal-notice/"
 		publisher = "https://yelosan.youronly.one/"
 		sameas = [
+			"https://c.im/@youronlyone",
 			"https://mastodon.social/@youronlyone",
+			"https://mastodon.online/@youronlyone",
 			"https://pixelfed.social/youronlyone",
 			"https://youtube.com/YourOnlyONEofcl",
 			"https://twitter.com/YourOnlyONEofcl",
@@ -280,8 +282,11 @@ googleadsense = "ca-pub-8360283248006398"
 			"https://www.pinterest.com/YourOnlyONEofcl",
 			"https://www.eyeem.com/u/YourOnlyOne",
 			"https://www.goodreads.com/youronlyone",
+			"https://faecbook.com/techmagus",
 			"https://vero.co/youronlyone",
-			"https://faecbook.com/techmagus"
+			"https://ecency.com/@youronlyone",
+			"https://hive.blog/@youronlyone",
+			"https://steemit.com/@youronlyone"
 		]
 
 		[[semweb.persons]]
@@ -300,9 +305,7 @@ googleadsense = "ca-pub-8360283248006398"
 		followit = "uYZyV7MVARnWg9phNgMQ"
 
 	[analytics]
-		beampipeio = "youronly.one"
 		counterdev = "youronlyone"
-		insightsio = "kBp3NTTbGqo2BmcO"
 		microanalyticsio = "ZwSg9rf6GA"
 		swetrix = "bYdcXUajNvru"
 		cfwebanalytics = "07a05e5302d1458da3561ce41791e284"
