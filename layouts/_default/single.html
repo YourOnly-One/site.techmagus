@@ -19,7 +19,7 @@
     </div>
   </noscript>
   {{ end }}
-  <div class="single {{ if $.Param "hideSingleContentsWhenJSDisabled" }}hide{{ end }}">
+  <div class="h-entry single {{ if $.Param "hideSingleContentsWhenJSDisabled" }}hide{{ end }}">
     <div class="single__nojs">{{ i18n "nojs-message" }}</div>
     {{- /* NOTE: moved to /assets/ for CSP compatibility */ -}}
     <script src="{{ (resources.Get "js/single-01.js" | minify).RelPermalink }}" crossorigin="anonymous" defer="defer"></script>
@@ -27,16 +27,16 @@
     {{/* YourOnly.One: new addition */}}
     {{ with .Params.images }}
       <div class="txt_center" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
-        <img src="{{ index . 0 | absURL }}" />
+        <img src="{{ index . 0 | absURL }}" class="u-featured" />
       </div>
     {{ end }}
-    <h2 class="single__title" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">{{ .Title }}</h2>
-    <h3 class="single__subtitle">{{ .Params.subtitle }}</h3>
+    <h2 class="p-name single__title" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">{{ .Title }}</h2>
+    <h3 class="p-summary single__subtitle">{{ or .Params.subtitle .Description }}</h3>
     <div class="single__meta">
       {{ partial "body/infos" . }}
       {{ partial "body/tags" . }}
     </div>
-    <article class="single__contents" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}" data-clarity-region="article">
+    <article class="e-content single__contents" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}" data-clarity-region="article">
       {{ partial "body/toc" . }}
 
       {{- /* BGN: YourOnly.One: changed */ -}}

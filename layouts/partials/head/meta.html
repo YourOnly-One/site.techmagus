@@ -2,7 +2,7 @@
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" title="{{ .Name }}" href="{{ .Permalink | safeURL }}">
 {{ end }}
 {{- /* YourOnly.One: we already have this
-  <meta name="description" content="{{ $.Param "description" }}" />
+  <meta name="description" content="{{ $.Param "description" }}" class="p-summary" />
   {{ with $.Params.keywords }}
   <meta name="keywords" content="{{ delimit $.Params.keywords "," }}">
   {{ end }}

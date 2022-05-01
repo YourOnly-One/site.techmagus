@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {{/* Multilang support for lang attribute */}}
-<html lang="{{ or (.Site.LanguageCode) (.Site.Language.Lang) }}" dir="{{ $.Param "languagedir" | default "ltr" }}" prefix="og: https://ogp.me/ns#{{ if in .Site.Params.mainTypes .Type }} article: https://ogp.me/ns/article#{{ end }}">
+<html lang="{{ or (.Site.LanguageCode) (.Site.Language.Lang) }}" dir="{{ $.Param "languagedir" | default "ltr" }}" prefix="og: https://ogp.me/ns#{{ if in .Site.Params.mainTypes .Type }} article: https://ogp.me/ns/article#{{ end }}" class="h-feed">
 
 <head prefix="og: http://ogp.me/ns#">
     <!-- BGN: YourOnly.One Head-01-Top -->
@@ -15,7 +15,7 @@
     */ -}}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {{/* YourOnly.One: changed */}}
-    <title>{{ block "title" . }}{{ if eq .Kind "taxonomy" }}{{ i18n .Data.Plural (len .Data.Terms) }}{{ else }}{{ .Title }}{{ end }} – {{ .Site.Title }}{{ end }}</title>
+    <title class="p-name">{{ block "title" . }}{{ if eq .Kind "taxonomy" }}{{ i18n .Data.Plural (len .Data.Terms) }}{{ else }}{{ .Title }}{{ end }} – {{ .Site.Title }}{{ end }}</title>
     {{ partial "head/scripts" . }}
     {{ partial "head/styles" . }}
     {{ partial "head/meta" . }}

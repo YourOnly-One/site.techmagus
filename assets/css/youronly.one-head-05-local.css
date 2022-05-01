@@ -291,3 +291,7 @@ aside.partofseries ul {
   font-size: .85rem;
   padding-left: .7rem;
 }
+
+#webmentions > .comments > li img {
+  display: inline-block;
+}

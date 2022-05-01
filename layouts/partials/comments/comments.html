@@ -1,3 +1,7 @@
+{{ template "_internal/webmention.html" . }}
+<div class="single__contents">
+  <div id="webmentions"></div>
+</div>
 {{ if $.Param "enableComment" }}
   {{ if .Site.DisqusShortname }}
     {{ template "_internal/disqus.html" . }}
