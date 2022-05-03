@@ -15,7 +15,7 @@
   <div class="footer__poweredby">
     {{ partial "footer/site-counter" . }}
     {{- /* YourOnly.One: disabled
-      {{ if $.Site.Copyright }}        
+      {{ if $.Site.Copyright }}
         <p class="caption">
           {{ if $.Site.Params.copyrightOptions.enableCopyrightLink }}
             {{ $leftString := replace (index (split $.Site.Copyright "{}") 0) "{year}" now.Year }}
@@ -40,7 +40,7 @@
     <!-- END: YourOnly.One Footer-01 -->
     </div>
     <p class="caption txt_center">
-      <a href="https://github.com/zzossig/hugo-theme-zzo" rel="noopener external nofollow">Zzo</a> {{ i18n "themeby" }} <a href="https://github.com/zzossig" rel="noopener external nofollow" lang="ko">최성환</a>
+      <a href="https://github.com/zzossig/hugo-theme-zzo" rel="noopener external">Zzo</a> {{ i18n "themeby" }} <a href="https://github.com/zzossig" rel="noopener external" lang="ko">최성환</a>
     </p>
 
     {{- /* YourOnly.One: disabled
@@ -48,5 +48,5 @@
           <p class="caption">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
       {{ end }}
     */ -}}
-  </div> 
+  </div>
 </footer>
