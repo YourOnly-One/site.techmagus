@@ -22,7 +22,7 @@
   <div class="h-entry single {{ if $.Param "hideSingleContentsWhenJSDisabled" }}hide{{ end }}">
     <div class="single__nojs">{{ i18n "nojs-message" }}</div>
     {{- /* NOTE: moved to /assets/ for CSP compatibility */ -}}
-    <script src="{{ (resources.Get "js/single-01.js" | minify).RelPermalink }}" crossorigin="anonymous" defer="defer"></script>
+    <script src="{{ (resources.Get "js/single-01.js" | minify).RelPermalink }}" crossorigin="anonymous" defer></script>
 
     {{/* YourOnly.One: new addition */}}
     {{ with .Params.images }}
@@ -83,6 +83,6 @@
 </aside>
 {{ end }}
 {{- /* NOTE: moved to /assets/ for CSP compatibility */ -}}
-<script src="{{ $single02js.RelPermalink }}" crossorigin="anonymous" defer="defer"></script>
+<script src="{{ $single02js.RelPermalink }}" crossorigin="anonymous" defer></script>
 {{ partial "script/single-script" . }}
 {{ end }}

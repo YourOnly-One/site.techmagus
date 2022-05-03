@@ -39,7 +39,7 @@
       {{- end }}
     <!-- END: Yuki Body Top -->
     {{- /* NOTE: moved to /assets/ for CSP compatibility */ -}}
-    <script src="{{ (resources.Get "js/baseof.js" | minify).RelPermalink }}" crossorigin="anonymous" defer="defer"></script>
+    <script src="{{ (resources.Get "js/baseof.js" | minify).RelPermalink }}" crossorigin="anonymous" defer></script>
 
     <div id="container">
         {{ partial "body/main-left" . }}
