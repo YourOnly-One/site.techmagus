@@ -1,8 +1,8 @@
 #mainSections = ["blog", "posts"]                                             # Hugo default
 mainTypes = ["article", "sitepage", "review"]                                                # YourOnly.One
 
-rssfull = "true"
-jquerycdn = true
+rssfull = true
+jquerycdn = false
 websubhubs = ["https://pubsubhubbub.appspot.com/", "https://youronlyone.superfeedr.com/", "https://pubsubhubbub.superfeedr.com/", "https://websubhub.com/hub"]
 
 googleadsense = "ca-pub-8360283248006398"
