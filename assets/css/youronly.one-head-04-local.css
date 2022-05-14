@@ -168,7 +168,7 @@
   }
   code,
   pre {
-    font-family: "Noto Sans Mono", Consolas, Monaco, Menlo, dejavu sans mono, bitstream vera sans mono, courier new, lucida console, lucida sans typewriter, liberation mono, nimbus mono l, Monaco, Courier, var(--base-monospace-font),;
+    font-family: "Noto Sans Mono", Consolas, Monaco, Menlo, dejavu sans mono, bitstream vera sans mono, courier new, lucida console, lucida sans typewriter, liberation mono, nimbus mono l, Monaco, Courier, var(--base-monospace-font);
   }
   .highlight > .chroma code[data-lang]::before,
   .terms__title,
