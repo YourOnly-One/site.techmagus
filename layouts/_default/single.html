@@ -19,7 +19,7 @@
     </div>
   </noscript>
   {{ end }}
-  <div class="h-entry single {{ if $.Param "hideSingleContentsWhenJSDisabled" }}hide{{ end }}">
+  <div class="h-entry single {{ if $.Param "hideSingleContentsWhenJSDisabled" }}hide{{ end }}" data-clarity-region="article">
     <div class="single__nojs">{{ i18n "nojs-message" }}</div>
     {{- /* NOTE: moved to /assets/ for CSP compatibility */ -}}
     <script src="{{ (resources.Get "js/single-01.js" | minify).RelPermalink }}" crossorigin="anonymous" defer></script>
@@ -37,7 +37,7 @@
       {{ partial "body/tags" . }}
     </div>
 
-    <article class="e-content single__contents" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}" data-clarity-region="article">
+    <article class="e-content single__contents" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
       {{/* BGN: Badges */}}
       {{ partial "badges.html" . }}
       {{/* END: Badges */}}
