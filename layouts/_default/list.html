@@ -1,17 +1,49 @@
 {{ define "main" }}
 
 <main class="main inner" data-sidebar-position="{{ $.Param "sidebarPosition" }}">
-    <div class="list__main {{ if $.Param "enableSidebar" }}{{ if eq ($.Param "sidebarPosition") "left" }}mr{{ else }}lm{{ end }}{{ else }}lmr{{ end }}" data-clarity-region="article">
+    <div class="h-entry single list__main {{ if $.Param "enableSidebar" }}{{ if eq ($.Param "sidebarPosition") "left" }}mr{{ else }}lm{{ end }}{{ else }}lmr{{ end }}" data-clarity-region="article">
         {{ if $.Param "enableBreadcrumb" }}
           {{ partial "body/breadcrumb" . }}
         {{ end }}
-        <header class="list__header">
-            <h5 class="list__header--title capitalize h5">{{.Title}}</h5>
-        </header>
+        {{ with .Params.images }}
+          <div class="txt_center" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
+            <img src="{{ index . 0 | absURL }}" class="u-featured" />
+          </div>
+        {{ end }}
 
-        <div class="list__header--desc single__contents p2">
-            {{ .Content }}
+        {{- /* YourOnly.One: replaced
+          <header class="list__header">
+              <h5 class="p-name list__header--title capitalize h5">{{.Title}}</h5>
+          </header>
+        */ -}}
+        <h2 class="p-name single__title" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">{{ .Title }}</h2>
+        <h3 class="p-summary single__subtitle">{{ or .Params.subtitle .Description }}</h3>
+
+        <div class="single__meta">
+          {{ partial "body/infos" . }}
+          {{ partial "body/tags" . }}
         </div>
+
+        <article class="e-content single__contents" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
+          {{/* BGN: Badges */}}
+          {{ partial "badges.html" . }}
+          {{/* END: Badges */}}
+          {{ partial "body/toc" . }}
+
+          {{- /* BGN: YourOnly.One: changed */ -}}
+            {{- /* .Content */ -}}
+
+            {{- $inserthere := `<div role="cover-image-attributions">` -}}
+            {{- $insertcontent := partial "youronly.one-content-partof.html" . -}}
+            {{- $joined := print $insertcontent $inserthere -}}
+            {{- $content := replace .Content $inserthere $joined 1 -}}
+            {{ $content | safeHTML }}
+          {{- /* END: YourOnly.One: changed */ -}}
+
+          {{ with .Params.syndications }}
+            {{ partial "syndications.html" . }}
+          {{ end }}
+        </article>
 
         <div class="summary__container" data-display="block">
             {{ $paginator := .Paginate (where .Pages "Section" .Type).ByWeight }}
@@ -21,7 +53,7 @@
             {{ partial "pagination/pagination" . }}
         </div>
         {{ partial "search/search-result-desktop" . }}
-    </div>    
+    </div>
 
     {{ if $.Param "enableSidebar" }}
         <aside class="list__sidebar {{ if eq ($.Param "sidebarPosition") "left" }}l{{ else }}r{{ end }}" data-dir="{{ $.Param "languagedir" | default "ltr" }}">
