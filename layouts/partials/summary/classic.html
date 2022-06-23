@@ -31,16 +31,16 @@
       <header>
         <h5 class="p-name title h5"><a href='{{ .Permalink }}' class="u-url" rel="bookmark">{{- with .Params.pinned -}}{{ ($.Site.Params.pinIcon | safeHTML) | default "📌" }}&nbsp;{{- end -}}{{ .Title }}</a> </h5>
         <h6 class="subtitle caption">
-
           {{/* YourOnly.One: changed */}}
-          {{ if not .PublishDate.IsZero }}<time datetime="{{ .PublishDate.UTC.Format "2006-01-02T15:04:05Z07:00" }}" class="dt-published single__info" title="{{ i18n "tooltip-written" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">{{ ($.Site.Params.writtenTimeIcon | safeHTML) | default "📅" }}&nbsp;{{ time.Format $datetimeformat (.PublishDate.UTC.Add (time.ParseDuration $.Site.Language.Params.tzOffset)) }} {{ $.Site.Language.Params.tzAbbr }} </time>{{ end }}
+          {{ if not .PublishDate.IsZero }}<time datetime="{{ .PublishDate.UTC.Format "2006-01-02T15:04:05Z07:00" }}" class="dt-published single__info" title="{{ i18n "tooltip-written" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">{{ ($.Site.Params.writtenTimeIcon | safeHTML) | default "📅" }}&nbsp;{{ time.Format $datetimeformat (.PublishDate.UTC.Add (time.ParseDuration $.Site.Language.Params.tzOffset)) }} <abbr{{ with $.Site.Language.Params.tzAbbrTitle }} title="{{ printf "%s" . }}"{{ end }}>{{ $.Site.Language.Params.tzAbbr }}</abbr></time>{{ end }}
+
 
           {{/* YourOnly.One: changed */}}
           {{ if ne (.PublishDate.Format (i18n "summary-dateformat")) (.Lastmod.Format (i18n "summary-dateformat")) }}
-            {{ if not .Lastmod.IsZero }}<time datetime="{{ .Lastmod.UTC.Format "2006-01-02T15:04:05Z07:00" }}" class="dt-updated single__info" title="{{ i18n "tooltip-modified" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}"> {{ if not .PublishDate.IsZero }}&middot;{{ end }} {{ ($.Site.Params.modifiedTimeIcon | safeHTML) | default "📝" }}&nbsp;{{ time.Format $datetimeformat (.Lastmod.UTC.Add (time.ParseDuration $.Site.Language.Params.tzOffset)) }} {{ $.Site.Language.Params.tzAbbr }} </time>{{ end }}
+            {{ if not .Lastmod.IsZero }}{{ if not .PublishDate.IsZero }}&nbsp;&middot;&nbsp;{{ end }} <time datetime="{{ .Lastmod.UTC.Format "2006-01-02T15:04:05Z07:00" }}" class="dt-updated single__info" title="{{ i18n "tooltip-modified" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}"> {{ ($.Site.Params.modifiedTimeIcon | safeHTML) | default "📝" }}&nbsp;{{ time.Format $datetimeformat (.Lastmod.UTC.Add (time.ParseDuration $.Site.Language.Params.tzOffset)) }} <abbr{{ with $.Site.Language.Params.tzAbbrTitle }} title="{{ printf "%s" . }}"{{ end }}>{{ $.Site.Language.Params.tzAbbr }}</abbr></time>{{ end }}
           {{ end }}
 
-          <span title="{{ i18n "tooltip-reading-time" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}"> &middot; {{ ($.Site.Params.readingTimeIcon | safeHTML) | default "☕" }}&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "reading-time" }} </span>
+          &nbsp;&middot;&nbsp; <span class="single__info" title="{{ i18n "tooltip-reading-time" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}"> {{ ($.Site.Params.readingTimeIcon | safeHTML) | default "☕" }}&nbsp;{{ .ReadingTime }}&nbsp;{{ i18n "reading-time" }} </span>
 
           {{- /* YourOnly.One: changed
             {{ with $.Param "author" }}
@@ -50,15 +50,15 @@
 
           {{ if $frontmatterpersons }}{{ range $i, $frontmatterperson := index $frontmatterpersons }}{{ $dataperson := index $datapersons $frontmatterperson.person }}{{ if $i }}, {{ end }}
             {{- /* note: if [[authors]] is set in frontmatter, use this to display a list of persons with fallback to /data/persons/ if present */}}
-              &middot; <address class="p-author h-card"><span class="p-name" title="{{ i18n "single-writtenBy" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">{{ or ($frontmatterperson.emoji) ($dataperson.emoji) | default "🖋️" }}&nbsp;{{ or ($frontmatterperson.name) ($dataperson.name) }}</span></address>
+              &nbsp;&middot;&nbsp; <address class="p-author h-card"><span class="p-name" title="{{ i18n "single-writtenBy" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">{{ or ($frontmatterperson.emoji) ($dataperson.emoji) | default "🖋️" }}&nbsp;{{ or ($frontmatterperson.name) ($dataperson.name) }}</span></address>
             {{ end }}
           {{ else if $semwebpersons }}{{ range $i, $semwebperson := index $semwebpersons }}{{ $dataperson := index $datapersons $semwebperson.person }}{{ if $i }}, {{ end }}
             {{- /* note: else if [[semweb.persons]] is set in config file, use it to display a list of persons with fallback to /data/persons/ if present */}}
-              &middot; <address class="p-author h-card"><span class="p-name" title="{{ i18n "single-writtenBy" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">{{ or ($semwebperson.emoji) ($dataperson.emoji) | default "🖋️" }}&nbsp;{{ or ($semwebperson.name) ($dataperson.name) }}</span></address>
+              &nbsp;&middot;&nbsp; <address class="p-author h-card"><span class="p-name" title="{{ i18n "single-writtenBy" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">{{ or ($semwebperson.emoji) ($dataperson.emoji) | default "🖋️" }}&nbsp;{{ or ($semwebperson.name) ($dataperson.name) }}</span></address>
             {{ end }}
           {{ else if .Param "author" }}
             {{- /* note: else if default Hugo 'author' param is used in frontmatter or config, display generic */}}
-              &middot; <address class="p-author h-card"><span class="p-name" title="{{ i18n "single-writtenBy" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">{{ .Param "author.emoji" | default "🖋️" }}&nbsp;{{ .Param "author.name" }}</span></address>
+              &nbsp;&middot;&nbsp; <address class="p-author h-card"><span class="p-name" title="{{ i18n "single-writtenBy" }}" dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}">{{ .Param "author.emoji" | default "🖋️" }}&nbsp;{{ .Param "author.name" }}</span></address>
           {{ end }}
         </h6>
       </header>
