@@ -1,7 +1,7 @@
 [hugoVersion]
   extended = true
   #max = ""
-  min = "0.97.0"
+  min = "0.101.0"
 
 [[imports]]
   disable = false                           # default: false
@@ -54,6 +54,15 @@
     #  target = "content"
     #  lang = "ko"
   # END: /techmagus/ fill gaps content
+
+
+[[imports]]
+  path = "gitlab.com/youronlyone/images"
+  # BGN: /techmagus/ images
+    [[imports.mounts]]
+      source = "techmagus"
+      target = "assets/images"
+  # END: /techmagus/ images
 
 
 # See: https://gohugo.io/hugo-modules/configuration/#module-config-mounts
