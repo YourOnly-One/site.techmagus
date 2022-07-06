@@ -95,7 +95,7 @@
   tzAbbr = "JST"                          # custom
   tzAbbrTitle = "Japan Standard Time"                        # custom
   weight = 140
-  title = "ハイテク マギ"
+  title = "ハイテク マギ 🚀"
   [[ja.menu.main]]
     name              = "ホーム"
     identifier        = "home"
@@ -117,7 +117,7 @@
   tzAbbr = "KST"                          # custom
   tzAbbrTitle = "Korea Standard Time"                        # custom
   weight = 150
-  title = "테크 마구스"
+  title = "테크 마구스 🚀"
   [[ko.menu.main]]
     name              = "집"
     identifier        = "home"

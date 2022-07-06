@@ -10,7 +10,7 @@ googleadsense = "ca-pub-8360283248006398"
 ### BGN: Structured Data ###
 	siteStartYear = 2003
 
-	description = "Science and Technology Playground."
+	description = "Science and Technology Playground"
 	license = "https://im.youronly.one/p/legal-notice/"
 	keywords = ["YourOnly.One", "Yuki", "ᜌᜓᜃᜒ", "techmagus"] # Can be overriden per page
 	images = ["https://rsc.youronly.one/img/y/techmagus-smartphone-1920x1280.webp", "https://rsc.youronly.one/img/y/techmagus-Architetto-Esperiment-chimico.webp"]
