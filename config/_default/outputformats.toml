@@ -1,0 +1,6 @@
+_merge = "deep"
+[SearchIndex]
+  mediaType = "application/json"
+  baseName = "index"
+  isPlainText = true
+  notAlternative = true
