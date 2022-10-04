@@ -1,9 +1,10 @@
 {{- $androidchrome192png := resources.Get "favicon/android-chrome-192x192.png" | resources.Fingerprint "sha384" -}}
 {{- $androidchrome512png := resources.Get "favicon/android-chrome-512x512.png" | resources.Fingerprint "sha384" -}}
 {
-  "name": "techmagus",
-  "short_name": "techmagus",
+  "name": "techmagus 🚀",
+  "short_name": "techmagus 🚀",
   "description": "Science and Technology Playground",
+  "id": "/techmagus/",
   "dir": "auto",
   "lang": "en-PH",
   "categories": ["education", "personalization", "science", "security", "technology", "utilities"],
