@@ -1,7 +1,7 @@
 /* BGN: Theme font overrides */
   /* We have to split into groups otherwise browsers will ignore. */
   html {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
 
   .navbar__title,
@@ -9,7 +9,7 @@
   .navbarm__menu--item > a,
   .header .title,
   .site-header__title {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .site-header__subtitle[data-cursive="true"] {
     font-family: courgette, cursive;
@@ -17,7 +17,7 @@
   .sidebar-recent__title,
   .sidebar-recent__a,
   .bio {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .bio__name {
     font-family: inherit;
@@ -32,35 +32,35 @@
   .pagination-single__left,
   .pagination-single__right,
   .related__link {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__dark .search .input.placeholder,
   .theme__dark .search .input:-moz-placeholder,
   .theme__dark .search .input::-moz-placeholder,
   .theme__dark .search .input:-ms-input-placeholder,
   .theme__dark .search .input::-webkit-input-placeholder {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__light .search .input.placeholder,
   .theme__light .search .input:-moz-placeholder,
   .theme__light .search .input::-moz-placeholder,
   .theme__light .search .input:-ms-input-placeholder,
   .theme__light .search .input::-webkit-input-placeholder {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__hacker .search .input.placeholder,
   .theme__hacker .search .input:-moz-placeholder,
   .theme__hacker .search .input::-moz-placeholder,
   .theme__hacker .search .input:-ms-input-placeholder,
   .theme__hacker .search .input::-webkit-input-placeholder {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__solarized .search .input.placeholder,
   .theme__solarized .search .input:-moz-placeholder,
   .theme__solarized .search .input::-moz-placeholder,
   .theme__solarized .search .input:-ms-input-placeholder,
   .theme__solarized .search .input::-webkit-input-placeholder {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__kimbie a {
     color: #ff5350;
@@ -70,102 +70,102 @@
   .theme__kimbie .search .input::-moz-placeholder,
   .theme__kimbie .search .input:-ms-input-placeholder,
   .theme__kimbie .search .input::-webkit-input-placeholder {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__dark .search-content a:not(:last-child),
   .theme__light .search-content a:not(:last-child),
   .theme__hacker .search-content a:not(:last-child),
   .theme__solarized .search-content a:not(:last-child),
   .theme__kimbie .search-content a:not(:last-child) {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .search-result__item--title {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__dark .mobile-search__top--input.placeholder,
   .theme__dark .mobile-search__top--input:-moz-placeholder,
   .theme__dark .mobile-search__top--input::-moz-placeholder,
   .theme__dark .mobile-search__top--input:-ms-input-placeholder,
   .theme__dark .mobile-search__top--input::-webkit-input-placeholder {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__light .mobile-search__top--input.placeholder,
   .theme__light .mobile-search__top--input:-moz-placeholder,
   .theme__light .mobile-search__top--input::-moz-placeholder,
   .theme__light .mobile-search__top--input:-ms-input-placeholder,
   .theme__light .mobile-search__top--input::-webkit-input-placeholder {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__hacker .mobile-search__top--input.placeholder,
   .theme__hacker .mobile-search__top--input:-moz-placeholder,
   .theme__hacker .mobile-search__top--input::-moz-placeholder,
   .theme__hacker .mobile-search__top--input:-ms-input-placeholder,
   .theme__hacker .mobile-search__top--input::-webkit-input-placeholder {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__solarized .mobile-search__top--input.placeholder,
   .theme__solarized .mobile-search__top--input:-moz-placeholder,
   .theme__solarized .mobile-search__top--input::-moz-placeholder,
   .theme__solarized .mobile-search__top--input:-ms-input-placeholder,
   .theme__solarized .mobile-search__top--input::-webkit-input-placeholder {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__kimbie .mobile-search__top--input.placeholder,
   .theme__kimbie .mobile-search__top--input:-moz-placeholder,
   .theme__kimbie .mobile-search__top--input::-moz-placeholder,
   .theme__kimbie .mobile-search__top--input:-ms-input-placeholder,
   .theme__kimbie .mobile-search__top--input::-webkit-input-placeholder {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .mobile-search__item--title,
   .summary-card .title a,
   .summary-classic .title a,
   .summary-classic__text {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .taxo__title,
   .taxo__text,
   .taxo__num,
   .taxo__link {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .whoami__title,
   .whoami__written-by,
   .busuanzi__item--label,
   .donation__message,
   .donation__item {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .box,
   .modal__caption--text,
   .modal__paging,
   .codetab__link {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
     .copy-to-clipboard::after {
-      font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+      font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
     }
   }
   .tab__link,
   .not-found {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .archive__key,
   .archive__type,
   .archive__date,
   .archive__title,
   .archive__subtitle {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .gallery .grid-item__desc,
   .list__header {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .single__title,
   .single__subtitle,
   .single__shorttitle {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .single__contents h1,
   .single__contents h2,
@@ -174,11 +174,11 @@
   .single__contents h5,
   .single__contents h6,
   .single__contents pre > code:not([class^="language"])::before {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   code,
   pre {
-    font-family: var(--font-mono-yelosan, monospace);
+    font-family: var(--font-mono-noto, monospace);
   }
   .highlight > .chroma code[data-lang]::before,
   .terms__title,
@@ -188,27 +188,27 @@
   .showcase__box--title,
   .pub__box--title,
   .resume__header--name {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__dark .resume__section--sectiontitle,
   .theme__dark .resume__section--title {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__light .resume__section--sectiontitle,
   .theme__light .resume__section--title {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__hacker .resume__section--sectiontitle,
   .theme__hacker .resume__section--title {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__solarized .resume__section--sectiontitle,
   .theme__solarized .resume__section--title {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
   .theme__kimbie .resume__section--sectiontitle,
   .theme__kimbie .resume__section--title {
-    font-family: var(--font-sans-yelosan, var(--font-hebrew-sans-yelosan, var(--font-baybayin-sans-yelosan, sans-serif)));
+    font-family: var(--font-sans-noto, var(--font-hebrew-sans-noto, var(--font-baybayin-sans-noto, sans-serif)));
   }
 /* END: Theme font overrides */
 
