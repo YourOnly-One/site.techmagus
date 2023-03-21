@@ -6,7 +6,6 @@ jquerycdn = true
 websubhubs = ["https://pubsubhubbub.appspot.com/", "https://youronlyone.superfeedr.com/", "https://pubsubhubbub.superfeedr.com/", "https://websubhub.com/hub"]
 
 favicon_mstilecolor = "#ffffff"
-#googleadsense = "ca-pub-8360283248006398"
 
 ### BGN: Structured Data ###
   siteStartYear = 2003
@@ -118,7 +117,7 @@ favicon_mstilecolor = "#ffffff"
   enableThemeChange = true
 
   # service
-  #googleTagManager = ""                                          # We already have this set on our own (see top of this file)
+  #googleTagManager = ""
   #baiduAnalytics = ""
   enableBusuanzi = false
   busuanziSiteUV = true
