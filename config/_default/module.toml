@@ -15,6 +15,8 @@ workspace = "off"
   path = "codeberg.org/yelosan/hugo-semantic-web"
 
 [[imports]]
+  ignoreConfig = true
+  ignoreImports = true
   path = "gitlab.com/youronlyone/images"
   # BGN: /techmagus/ images
     [[imports.mounts]]
@@ -23,6 +25,8 @@ workspace = "off"
   # END: /techmagus/ images
 
 [[imports]]
+  ignoreConfig = true
+  ignoreImports = true
   path = "codeberg.org/youronlyone/content"
   # BGN: /techmagus/ content
     #[[imports.mounts]]
@@ -55,13 +59,20 @@ workspace = "off"
   # END: /techmagus/ fill gaps content
 
 [[imports]]
+  path = "codeberg.org/yelosan/hugo-globals"
+
+[[imports]]
   path = "codeberg.org/youronlyone/defaults"
 
 [[imports]]
+  ignoreConfig = true
+  ignoreImports = false
   path = "github.com/techmagus/hugo-theme-zzo"
 
 
 [[imports]]
+  ignoreConfig = true
+  ignoreImports = true
   path = "gitlab.com/youronlyone/images"
   # BGN: /techmagus/ images
     [[imports.mounts]]

@@ -1,14 +1,7 @@
-# home/atom.xml
-home = ["HTML", "Atom", "RSS", "SearchIndex"]                            # default: HTML, RSS
+# See: https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes
+_merge = "deep"
 
-# home/section/PAGE-POST/atom.xml
-page = ["HTML"]                            # default: HTML
-
-# home/SECTION/atom.xml
-section = ["HTML", "SearchIndex"]                         # default: HTML, RSS
-
-# home/TAXONOMY/atom.xml
-taxonomy = ["HTML", "SearchIndex"]                        # default: HTML, RSS
-
-# home/taxonomy/TERM/atom.xml
-term = ["HTML", "SearchIndex"]                            # default: HTML, RSS
+home = ["HTML", "JSON", "Atom", "RSS", "SearchIndex"]
+section = ["HTML", "SearchIndex"]
+taxonomy = ["HTML", "SearchIndex"]
+term = ["HTML", "SearchIndex"]

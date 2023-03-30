@@ -1,4 +1,6 @@
+# See: https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes
 _merge = "deep"
+
 [SearchIndex]
   mediaType = "application/json"
   baseName = "index"

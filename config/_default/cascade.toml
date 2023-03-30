@@ -1,3 +1,8 @@
+# See: https://gohugo.io/getting-started/configuration/#merge-configuration-from-themes
+_merge = "deep"
+
+# See: https://gohugo.io/content-management/front-matter/#front-matter-cascade
+
 images = ["https://rsc.youronly.one/img/y/techmagus-smartphone-1920x1280.webp", "https://rsc.youronly.one/img/y/techmagus-Architetto-Esperiment-chimico.webp"]
   [_target]
     kind = "page"
