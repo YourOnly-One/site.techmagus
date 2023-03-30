@@ -38,8 +38,12 @@
         {{ partial "youronly.one-body-01-top.html" . }}
       {{- end }}
     <!-- END: Yuki Body Top -->
-    {{- /* NOTE: moved to /assets/ for CSP compatibility */ -}}
-    <script src="{{ (resources.Get "js/baseof.js" | minify).RelPermalink }}" crossorigin="anonymous" defer></script>
+    <script>
+      var localTheme = localStorage.getItem('theme');
+      if (localTheme) {
+          document.getElementById('root').className = 'theme__' + localTheme;
+      }
+    </script>
 
     <div id="container">
         {{ partial "body/main-left" . }}

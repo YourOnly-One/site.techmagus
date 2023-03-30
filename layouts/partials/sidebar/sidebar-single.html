@@ -2,8 +2,7 @@
 {{ if and (or ($.Param "enableToc") ($.Param "toc")) (ne ($.Param "tocPosition") "outer") }}
 
 <section class="sidebar hide sidebarfixed">
-  {{- /* NOTE: moved to /assets/ for CSP compatibility */ -}}
-  <script src="{{ (resources.Get "js/sidebar-single.js" | minify).RelPermalink }}" crossorigin="anonymous" defer></script>
+  <script>document.querySelector('.sidebar').classList.remove('hide')</script>
 
   <section id="Now_Playing-LastFM">
     <!--
