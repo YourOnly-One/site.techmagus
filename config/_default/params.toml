@@ -34,7 +34,7 @@ favicon_mstilecolor = "#ffffff"
   minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
 
   # appbar
-  enableAppbarSearchIcon = false # YELOSAN: not working as of 2023-03-30
+  enableAppbarSearchIcon = true # YELOSAN: not working as of 2023-03-30
   enableAppbarLangIcon = true
 
   # header
@@ -45,12 +45,12 @@ favicon_mstilecolor = "#ffffff"
   showMobileMenuTerms = ["series", "categories", "tags"]
 
   # search
-  enableSearch = false # YELOSAN: not working as of 2023-03-30
+  enableSearch = true # YELOSAN: not working as of 2023-03-30
   enableSearchHighlight = true
   searchResultPosition = "side" # side, main
   searchContent = true # include content to search index
   searchDistance = 100 # fuse option
-  searchThreshold = 0.4 # 0.0: exact match, 1.0: any match
+  searchThreshold = 0.5 # 0.0: exact match, 1.0: any match
 
   # body
   enableBreadcrumb = false
