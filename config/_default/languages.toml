@@ -5,7 +5,7 @@ _merge = "deep"
   [[en-ph.menu.main]]
     name              = "Home"
     identifier        = "home"
-    url               = "/"
+    url               = ""
     pre               = "home"
     weight            = 1
     [en-ph.menu.main.params]
@@ -16,7 +16,7 @@ _merge = "deep"
   [[ja.menu.main]]
     name              = "ホーム"
     identifier        = "home"
-    url               = "/"
+    url               = ""
     pre               = "home"
     weight            = 1
     [ja.menu.main.params]
@@ -29,7 +29,7 @@ _merge = "deep"
   [[ko.menu.main]]
     name              = "집"
     identifier        = "home"
-    url               = "/"
+    url               = ""
     pre               = "home"
     weight            = 1
     [ko.menu.main.params]

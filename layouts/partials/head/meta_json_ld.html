@@ -30,7 +30,7 @@
     {{ end -}}
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": {{ .Site.BaseURL }}
+      "@id": {{ site.BaseURL | relLangURL }}
     },
     "publisher": {
       "@type": "Organization",
@@ -41,7 +41,7 @@
         "url": {{ . | absURL }}
       },
       {{ end -}}
-      "url": {{ .Site.BaseURL }}
+      "url": {{ site.BaseURL | relLangURL }}
     }
   }
 </script>

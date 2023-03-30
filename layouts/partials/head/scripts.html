@@ -5,7 +5,7 @@
 {{- $skinHackerCode := i18n "skin-hacker" | jsonify -}}
 {{- $skinSolarizedCode := i18n "skin-solarized" | jsonify -}}
 {{- $skinKimbieCode := i18n "skin-kimbie" | jsonify -}}
-{{- $baseurl := $.Site.BaseURL | jsonify -}}
+{{- $baseurl := site.BaseURL | relLangURL | jsonify -}}
 {{- $permalink := .Permalink | jsonify -}}
 {{- $langprefix := $.Site.LanguagePrefix | jsonify -}}
 {{- $enableSearch := $.Param "enableSearch" | jsonify -}}
