@@ -30,30 +30,30 @@ workspace = "off"
   path = "codeberg.org/youronlyone/content"
   # BGN: /techmagus/ content
     #[[imports.mounts]]
-    #  source = "techmagus/en-ph"
+    #  source = "content/techmagus/en-ph"
     #  target = "content"
     #  lang = "en"
     [[imports.mounts]]
-      source = "techmagus/en-ph"
+      source = "content/techmagus/en-ph"
       target = "content"
       lang = "en-ph"
     [[imports.mounts]]
-      source = "techmagus/ja"
+      source = "content/techmagus/ja"
       target = "content"
       lang = "ja"
     [[imports.mounts]]
-      source = "techmagus/ko"
+      source = "content/techmagus/ko"
       target = "content"
       lang = "ko"
   # END: /techmagus/ content
 
   # BGN: /techmagus/ fill gaps content
     #[[imports.mounts]]
-    #  source = "techmagus/en-ph"
+    #  source = "content/techmagus/en-ph"
     #  target = "content"
     #  lang = "ja"
     #[[imports.mounts]]
-    #  source = "techmagus/en-ph"
+    #  source = "content/techmagus/en-ph"
     #  target = "content"
     #  lang = "ko"
   # END: /techmagus/ fill gaps content
