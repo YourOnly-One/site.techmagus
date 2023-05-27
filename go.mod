@@ -1,6 +1,6 @@
 module gitlab.com/youronlyone/site.techmagus
 
-go 1.19
+go 1.20
 
 require (
   codeberg.org/yelosan/hugo-feeds main
