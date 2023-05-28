@@ -2,6 +2,7 @@
 _merge = "deep"
 
 home = ["HTML", "JSON", "Atom", "RSS", "SearchIndex"]
-section = ["HTML", "SearchIndex"]
-taxonomy = ["HTML", "SearchIndex"]
-term = ["HTML", "SearchIndex"]
+page = ["HTML"]
+section = ["HTML", "Atom", "RSS", "SearchIndex"]
+taxonomy = ["HTML", "Atom", "RSS", "SearchIndex"]
+term = ["HTML", "Atom", "RSS", "SearchIndex"]
