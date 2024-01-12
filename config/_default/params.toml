@@ -5,6 +5,8 @@ jquerycdn = true
 
 favicon_mstilecolor = "#ffffff"
 
+disqusShortname = "youronlyone"
+
 ### BGN: Structured Data ###
   siteStartYear = 2003
   description = "Science and Technology Playground"

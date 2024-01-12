@@ -3,7 +3,7 @@
   <div id="webmentions"></div>
 </div>
 {{ if $.Param "enableComment" }}
-  {{ if .Site.DisqusShortname }}
+  {{ if .Params.disqusShortname }}
     {{ template "_internal/disqus.html" . }}
   {{ else if $.Param "commento" }}
     {{ partial "comments/commento.html" . }}
