@@ -8,7 +8,7 @@ favicon_mstilecolor = "#ffffff"
 ### BGN: Structured Data ###
   siteStartYear = 2003
   description = "Science and Technology Playground"
-  keywords = ["YourOnly.One", "Yuki", "ᜌᜓᜃᜒ", "techmagus"] # Can be overriden per page
+  keywords = ["techmagus", "テク魔法使い", "ハイテク マギ", "테크마법사", "테크 마구스", "YourOnlyOne", "YourOnly.One", "Yahuhanan Yukiya Sese Cuneta", "Yuki", "YoHan", "Yo-Han", "ᜌᜓᜃᜒ", "사요한", "謝雪矢（ゆきや）", "스노", "Seu-No", "SeuNo", "Snow", "Yohanan", "ᜌᜓᜑᜈᜈ᜔", "ᜌᜓᜑᜈᜈ᜕", "ᜌᜑᜓᜑᜈᜈ᜔", "ᜌᜑᜓᜑᜈᜈ᜕"] # Can be overriden per page
   images = ["https://rsc.youronly.one/img/y/techmagus-smartphone-1920x1280.webp", "https://rsc.youronly.one/img/y/techmagus-Architetto-Esperiment-chimico.webp"]
 ### END: Structured Data ###
 
@@ -251,7 +251,6 @@ favicon_mstilecolor = "#ffffff"
       "https://www.facebook.com/techmagus",
       "https://c.im/@YourOnlyOne",
       "https://pixelfed.social/YourOnlyOne",
-      "https://hashi.icu/@YourOnlyOne",
       "https://www.youtube.com/@YourOnlyOneOfcl",
       "https://www.facebook.com/YourOnly.ONE.ofcl"
     ]
