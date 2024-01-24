@@ -9,7 +9,7 @@
             <span class="sidebar-recent__title p2 colorrevert">{{ .Title }}</span>
             {{ range first ($.Param "itemsPerCategory") .Pages }}
             <li class="sidebar-recent">
-                <a href="{{ .RelPermalink }}" class="sidebar-recent__title p1">{{ .Title }}</a>
+                <a href="{{ .Permalink }}" class="sidebar-recent__title p1">{{ .Title }}</a>
             </li>
             {{ end }}
             <hr class="hr-fade sidebar-hr" />
@@ -75,11 +75,11 @@
 
         {{ range $filteredSections }}
         <section class="sidebar-recent">
-            <a href="{{ .RelPermalink }}" class="sidebar-recent__title p2">{{ .Title }}</a>
+            <a href="{{ .Permalink }}" class="sidebar-recent__title p2">{{ .Title }}</a>
             <ul class="sidebar-recent__ul">
                 {{ range first ($.Param "itemsPerCategory") .Pages }}
                     <li>
-                        <a href="{{ .RelPermalink }}" class="sidebar-recent__a p2">{{ .Title }}</a>
+                        <a href="{{ .Permalink }}" class="sidebar-recent__a p2">{{ .Title }}</a>
                     </li>
                 {{ end }}
             </ul>

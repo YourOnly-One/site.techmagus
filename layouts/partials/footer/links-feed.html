@@ -13,7 +13,7 @@
       {{ end }}
     */ -}}
     {{ with .OutputFormats.Get "Atom" }}
-        <li><a href="{{ .RelPermalink }}" type="application/atom+xml" title="Feed" class="fas fa-rss"></a></li>
+        <li><a href="{{ .Permalink }}" type="application/atom+xml" title="Feed" class="fas fa-rss"></a></li>
     {{ end }}
   {{ end }}
 {{ end }}
