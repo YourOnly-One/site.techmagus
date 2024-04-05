@@ -12,7 +12,7 @@ _merge = "deep"
       newTab = false
 
 [ja]
-  title = "テク魔法使い 🚀"
+  title = "テク魔法使い"
   [[ja.menu.main]]
     name              = "ホーム"
     identifier        = "home"
@@ -25,7 +25,7 @@ _merge = "deep"
     description = "科学技術の遊び場"     # IMPT for Schema.org; OpenGraph; Twitter Cards -- for RDFa, Microdata, JSON-LD
 
 [ko]
-  title = "테크마법사 🚀"
+  title = "테크마법사"
   [[ko.menu.main]]
     name              = "집"
     identifier        = "home"
