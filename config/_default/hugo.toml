@@ -24,7 +24,7 @@
 ####### BACKEND #######
 
   disableKinds = ["robotsTXT"]
-  enableMissingTranslationPlaceholders = false              # default: false
+  enableMissingTranslationPlaceholders = true              # default: false
   #timeout = "30s"                                           # default: 30s
 
   #### Other settings ####
