@@ -32,34 +32,26 @@ workspace = "off"
   ignoreImports = true
   path = "codeberg.org/youronlyone/content"
   # BGN: /techmagus/ content
-    #[[imports.mounts]]
-    #  source = "content/techmagus/en-ph"
-    #  target = "content"
-    #  lang = "en"
     [[imports.mounts]]
-      source = "content/techmagus/en-ph"
+      source = "content/techmagus"
       target = "content"
-      lang = "en-ph"
-    [[imports.mounts]]
-      source = "content/techmagus/ja"
-      target = "content"
-      lang = "ja"
-    [[imports.mounts]]
-      source = "content/techmagus/ko"
-      target = "content"
-      lang = "ko"
+      #lang = "en"
   # END: /techmagus/ content
 
+
   # BGN: /techmagus/ fill gaps content
-    [[imports.mounts]]
-      source = "content/techmagus/en-ph"
-      target = "content"
-      lang = "ja"
-    [[imports.mounts]]
-      source = "content/techmagus/en-ph"
-      target = "content"
-      lang = "ko"
+    #[[imports.mounts]]
+    #  source = "content/techmagus"
+    #  target = "content"
+    #  lang = "ja"
+    #  includeFiles = ["**/*.en-ph.*"]
+    #[[imports.mounts]]
+    #  source = "content/techmagus"
+    #  target = "content"
+    #  lang = "ko"
+    #  includeFiles = ["**/*.en-ph.*"]
   # END: /techmagus/ fill gaps content
+
 
 [[imports]]
   path = "codeberg.org/yelosan/hugo-globals"
@@ -69,19 +61,7 @@ workspace = "off"
 
 [[imports]]
   ignoreConfig = true
-  ignoreImports = false
   path = "github.com/techmagus/hugo-theme-zzo"
-
-
-[[imports]]
-  ignoreConfig = true
-  ignoreImports = true
-  path = "gitlab.com/youronlyone/images"
-  # BGN: /techmagus/ images
-    [[imports.mounts]]
-      source = "techmagus"
-      target = "assets/images"
-  # END: /techmagus/ images
 
 
 # See: https://gohugo.io/hugo-modules/configuration/#module-config-mounts
@@ -95,22 +75,9 @@ workspace = "off"
     source = "assets"
     target = "assets"
 
-  #[[mounts]]
-  #  source = "content/en-ph"
-  #  target = "content"
-  #  lang = "en"                                        # when in multihost / multilang mode
   [[mounts]]
-    source = "content/en-ph"
+    source = "content"
     target = "content"
-    lang = "en-ph"                                      # when in multihost / multilang mode
-  [[mounts]]
-    source = "content/ja"
-    target = "content"
-    lang = "ja"                                         # when in multihost / multilang mode
-  [[mounts]]
-    source = "content/ko"
-    target = "content"
-    lang = "ko"                                         # when in multihost / multilang mode
 
   [[mounts]]
     source = "data"
@@ -124,19 +91,6 @@ workspace = "off"
     source = "layouts"
     target = "layouts"
 
-  #[[mounts]]
-  #  source = "static/en-ph"
-  #  target = "static"
-  #  lang = "en"                                        # when in multihost / multilang mode
   [[mounts]]
-    source = "static/en-ph"
+    source = "static"
     target = "static"
-    lang = "en-ph"                                      # when in multihost / multilang mode
-  [[mounts]]
-    source = "static/ja"
-    target = "static"
-    lang = "ja"                                         # when in multihost / multilang mode
-  [[mounts]]
-    source = "static/ko"
-    target = "static"
-    lang = "ko"                                         # when in multihost / multilang mode
