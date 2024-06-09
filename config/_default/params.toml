@@ -247,6 +247,14 @@ favicon_mstilecolor = "#ffffff"
   ##### BGN: syndication #####
     ## Custom entries only work if placed in per-site params.toml ##
     [[sns]]
+      url = 'is.youronly.one'
+      icon = 'bluesky.svg'
+    [[sns]]
+      url = 't.youronly.one'
+      icon = 'tumblr.svg'
+
+    ## Defaults
+    [[sns]]
       url = 'blogspot.com'
       icon = 'blogspot.svg'
     [[sns]]
@@ -261,6 +269,9 @@ favicon_mstilecolor = "#ffffff"
     [[sns]]
       url = 'catodon.social'
       icon = 'catodon.png'
+    [[sns]]
+      url = 'coracle.social'
+      icon = 'nostr.svg'
     [[sns]]
       url = 'diasp.org'
       icon = 'diaspora.svg'
@@ -283,6 +294,9 @@ favicon_mstilecolor = "#ffffff"
       url = 'instagram.com'
       icon = 'instagram.svg'
     [[sns]]
+      url = 'iris.to'
+      icon = 'nostr.svg'
+    [[sns]]
       url = 'mastodon.online'
       icon = 'mastodon.png'
     [[sns]]
@@ -291,6 +305,12 @@ favicon_mstilecolor = "#ffffff"
     [[sns]]
       url = 'naver.com'
       icon = 'naver.png'
+    [[sns]]
+      url = 'njump.me'
+      icon = 'nostr.svg'
+    [[sns]]
+      url = 'nosta.me'
+      icon = 'nostr.svg'
     [[sns]]
       url = 'p.lu'
       icon = 'peertube.svg'
@@ -301,8 +321,17 @@ favicon_mstilecolor = "#ffffff"
       url = 'plurk.com'
       icon = 'plurk.svg'
     [[sns]]
+      url = 'primal.net'
+      icon = 'nostr.svg'
+    [[sns]]
       url = 'reddit.com'
       icon = 'reddit.svg'
+    [[sns]]
+      url = 'satellite.earth'
+      icon = 'nostr.svg'
+    [[sns]]
+      url = 'snort.social'
+      icon = 'nostr.svg'
     [[sns]]
       url = 'socialhome.network'
       icon = 'socialhome-black.svg'
@@ -330,12 +359,6 @@ favicon_mstilecolor = "#ffffff"
     [[sns]]
       url = 'youtube.com'
       icon = 'youtube.svg'
-    [[sns]]
-      url = 'is.youronly.one'
-      icon = 'bluesky.svg'
-    [[sns]]
-      url = 't.youronly.one'
-      icon = 'tumblr.svg'
   ##### END: syndication #####
 ### END: Hugo module settings ###
 
